@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "d7e800bc0131d6e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f634e61a6df9898",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "96b91d94985d87aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bases de datos - Introduccion.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Bases de datos - Introduccion"
+            }
+          },
+          {
+            "id": "e382f5046e522079",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bases de datos relacionales.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Bases de datos relacionales"
+            }
+          },
+          {
+            "id": "f9a79f7bfbf2f0b2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bases de datos - Introduccion.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Bases de datos - Introduccion"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "895a6f73a8af6f6e",
+    "type": "split",
+    "children": [
+      {
+        "id": "c22142509d549131",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5095f6c981ac79f4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "67654bf573aaf7b9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "049bb15fbed3136a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 632.5
+  },
+  "right": {
+    "id": "ad6abd69816c4b3c",
+    "type": "split",
+    "children": [
+      {
+        "id": "23410e64dba9b289",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ccbfc7861a10ae8e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Bases de datos - Introduccion.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Bases de datos - Introduccion"
+            }
+          },
+          {
+            "id": "79b26fd820dfa40d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Bases de datos - Introduccion.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Bases de datos - Introduccion"
+            }
+          },
+          {
+            "id": "74941f5795062cb5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "09d1386ca82e87b1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Bases de datos - Introduccion.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Bases de datos - Introduccion"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "f9a79f7bfbf2f0b2",
+  "lastOpenFiles": [
+    "Carpeta sin título",
+    "mud.md",
+    "Normalización de bases de datos relacionales.md",
+    "Pasted image 20250323003740.png",
+    "Pasted image 20250323003555.png",
+    "Pasted image 20250323002923.png",
+    "Pasted image 20250322235345.png",
+    "Pasted image 20250322214730.png",
+    "Pasted image 20250322214406.png",
+    "Bases de datos relacionales.md",
+    "Untitled.canvas",
+    "Welcome.md",
+    "Pasted image 20250321172845.png",
+    "Bases de datos - Introduccion.md",
+    "Pasted image 20250321140240.png",
+    "Pasted image 20250321130245.png",
+    "Pasted image 20250319220944.png",
+    "Bases de datos relacionales"
+  ]
+}
