@@ -41,7 +41,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bases de datos - Introduccion.md",
+                "file": "Bases de datos/Bases de datos - Introduccion.md",
                 "mode": "source",
                 "source": false
               },
@@ -197,25 +197,29 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f9a79f7bfbf2f0b2",
+  "active": "5095f6c981ac79f4",
   "lastOpenFiles": [
+    "Untitled",
+    "Desarrollo de software",
+    "Untitled.md",
+    "Bases de datos",
+    "Bases de datos/Bases de datos - Introduccion.md",
     "Carpeta sin título",
     "mud.md",
-    "Normalización de bases de datos relacionales.md",
-    "Pasted image 20250323003740.png",
-    "Pasted image 20250323003555.png",
-    "Pasted image 20250323002923.png",
-    "Pasted image 20250322235345.png",
-    "Pasted image 20250322214730.png",
-    "Pasted image 20250322214406.png",
-    "Bases de datos relacionales.md",
+    "Bases de datos/Normalización de bases de datos relacionales.md",
+    "Bases de datos/Pasted image 20250323003740.png",
+    "Bases de datos/Pasted image 20250323003555.png",
+    "Bases de datos/Pasted image 20250323002923.png",
+    "Bases de datos/Pasted image 20250322235345.png",
+    "Bases de datos/Pasted image 20250322214730.png",
+    "Bases de datos/Pasted image 20250322214406.png",
+    "Bases de datos/Bases de datos relacionales.md",
     "Untitled.canvas",
     "Welcome.md",
-    "Pasted image 20250321172845.png",
-    "Bases de datos - Introduccion.md",
-    "Pasted image 20250321140240.png",
-    "Pasted image 20250321130245.png",
-    "Pasted image 20250319220944.png",
+    "Bases de datos/Pasted image 20250321172845.png",
+    "Bases de datos/Pasted image 20250321140240.png",
+    "Bases de datos/Pasted image 20250321130245.png",
+    "Bases de datos/Pasted image 20250319220944.png",
     "Bases de datos relacionales"
   ]
 }
