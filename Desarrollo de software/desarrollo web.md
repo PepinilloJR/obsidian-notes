@@ -28,15 +28,20 @@ donde:
 
 Secciones en HTML5
 
-las secciones, específicamente,  <header>, <footer>, <main>, <article>, <nav>, son utilizadas dentro del <body> para estructurarlo, mejorando su claridad (contrario al uso general de <div>), accesibilidad de la pagina para tecnologías especificas como lectores de pantalla, así como para mejorar la acepción por el SEO, los motores de búsqueda interpretan mejor el contenido cuando esta estructurada de forma semánticamente correcta.
+las secciones, específicamente,
+```
+  <header>, <footer>, <main>, <article>, <nav>, 
+```
+son utilizadas dentro del body para estructurarlo, mejorando su claridad (contrario al uso general de div), accesibilidad de la pagina para tecnologías especificas como lectores de pantalla, así como para mejorar la acepción por el SEO, los motores de búsqueda interpretan mejor el contenido cuando esta estructurada de forma semánticamente correcta.
 
 ![[Pasted image 20250325231636.png]]
 
-Luego existen otras tags mas funcionales, como <form>, aquí una descripción corta:
+Luego existen otras tags mas funcionales, como form, aquí una descripción corta:
 
 ![[Pasted image 20250326000525.png]]
 ![[Pasted image 20250326000630.png]]
 
-Uno muy importante para la accesibilidad del usuario sera <label>
+Uno muy importante para la accesibilidad del usuario sera label
 
 ![[Pasted image 20250326000708.png]]
+#### CSS

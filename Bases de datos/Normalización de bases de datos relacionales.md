@@ -32,6 +32,13 @@ aquí hablamos de subconjunto, ya que ponemos considerar que X es una combinaci�
 
 si X es un solo atributo, entonces cualquier dependencia funcional de la forma 
 R.X  á R.Y es **siempre completa**.
+
+##### Dependencia Funcional Transitiva:
+
+la dependencia funcinal transitiva se da cuando un atributo Y de R depende funcionalmente de X, y a su vez, dada otra relacion S, un atributo Z de S depende funcionalmente de Y de S, entonces por transitvidad, Z de S depende funcionalmente de X de R
+
+por ejemplo, si tenemos una relación que se basa en las prestaciones de libros, se puede dar que un préstamo contenga el ID del libro, y el genero, a su vez, un libro contiene un genero en su relación, por lo tanto, se da una dependencia funcional transitiva, y puede descartarse el genero en la relación préstamo, ya que este se puede conocer por el libro 
+
 ##### Formas normales:
 
 **Primera forma Normal (1FN)**
