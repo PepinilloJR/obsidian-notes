@@ -48,9 +48,37 @@
               "icon": "lucide-file",
               "title": "Bases de datos - Introduccion"
             }
+          },
+          {
+            "id": "5c17237454410a20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Desarrollo de software/Introducción a desarrollo de software.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Introducción a desarrollo de software"
+            }
+          },
+          {
+            "id": "91401308cb2c5b66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Desarrollo de software/desarrollo web.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "desarrollo web"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -107,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 632.5
+    "width": 318.5
   },
   "right": {
     "id": "ad6abd69816c4b3c",
@@ -197,29 +225,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5095f6c981ac79f4",
+  "active": "91401308cb2c5b66",
   "lastOpenFiles": [
+    "Pasted image 20250326000708.png",
+    "Pasted image 20250326000630.png",
+    "Pasted image 20250326000525.png",
+    "Desarrollo de software/Introducción a desarrollo de software.md",
+    "Desarrollo de software/desarrollo web.md",
+    "Desarrollo de software/Pasted image 20250325220232.png",
+    "Desarrollo de software/Pasted image 20250325231640.png",
+    "Desarrollo de software/Pasted image 20250325231636.png",
+    "Desarrollo de software/Pasted image 20250325231649.png",
+    "Desarrollo de software/Pasted image 20250325231659.png",
+    "Bases de datos/Bases de datos - Introduccion.md",
     "Untitled",
     "Desarrollo de software",
-    "Untitled.md",
     "Bases de datos",
-    "Bases de datos/Bases de datos - Introduccion.md",
     "Carpeta sin título",
     "mud.md",
     "Bases de datos/Normalización de bases de datos relacionales.md",
     "Bases de datos/Pasted image 20250323003740.png",
     "Bases de datos/Pasted image 20250323003555.png",
     "Bases de datos/Pasted image 20250323002923.png",
-    "Bases de datos/Pasted image 20250322235345.png",
-    "Bases de datos/Pasted image 20250322214730.png",
-    "Bases de datos/Pasted image 20250322214406.png",
     "Bases de datos/Bases de datos relacionales.md",
     "Untitled.canvas",
     "Welcome.md",
-    "Bases de datos/Pasted image 20250321172845.png",
-    "Bases de datos/Pasted image 20250321140240.png",
-    "Bases de datos/Pasted image 20250321130245.png",
-    "Bases de datos/Pasted image 20250319220944.png",
     "Bases de datos relacionales"
   ]
 }
