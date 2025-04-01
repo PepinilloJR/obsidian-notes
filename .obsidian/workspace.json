@@ -83,16 +83,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Desarrollo de software/desarrollo web.md",
+                "file": "Bases de datos/Normalización de bases de datos relacionales.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "desarrollo web"
+              "title": "Normalización de bases de datos relacionales"
+            }
+          },
+          {
+            "id": "989dfe5231e397f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bases de datos/Bases de datos - Introduccion.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Bases de datos - Introduccion"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -239,29 +253,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9f212ce5954a32a5",
+  "active": "989dfe5231e397f3",
   "lastOpenFiles": [
+    "Bases de datos/Estructura del DBMS.md",
+    "Bases de datos/Bases de datos relacionales.md",
+    "Bases de datos/Bases de datos - Introduccion.md",
+    "Bases de datos/Normalización de bases de datos relacionales.md",
+    "Desarrollo de software/desarrollo web.md",
     "Desarrollo de software/Introducción a desarrollo de software.md",
     "Desarrollo de software/Sitios estáticos y SPA.md",
     "Pasted image 20250327162749.png",
     "Pasted image 20250327162654.png",
-    "Desarrollo de software/desarrollo web.md",
     "Untitled",
     "Desarrollo de software/Pasted image 20250325220232.png",
     "Bases de datos/Pasted image 20250319220944.png",
     "Bases de datos/Pasted image 20250321172845.png",
     "Bases de datos/Pasted image 20250323003555.png",
-    "Bases de datos/Normalización de bases de datos relacionales.md",
     "Pasted image 20250326000708.png",
     "Pasted image 20250326000630.png",
     "Pasted image 20250326000525.png",
     "Desarrollo de software/Pasted image 20250325231640.png",
-    "Bases de datos/Bases de datos - Introduccion.md",
     "Desarrollo de software",
     "Bases de datos",
     "Carpeta sin título",
     "mud.md",
-    "Bases de datos/Bases de datos relacionales.md",
     "Untitled.canvas",
     "Welcome.md",
     "Bases de datos relacionales"

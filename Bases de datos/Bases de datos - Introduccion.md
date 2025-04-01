@@ -101,11 +101,11 @@ Luego, los datos reales de la base de datos en un momento concreto se denomina *
 Se define una base de datos con los siguientes tres niveles en su esquema
 
 1. Nivel interno: tiene un esquema interno describiendo la estructura del almacenamiento físico de la base de datos
-2. Nivel conceptual: tiene un esquema conceptual que describe la estructura de toda la base de datos para todo el conjunto de usuarios, es decir de única vision, ocultando detalles técnicos del almacenamiento, enfocándose en tipos de datos, relaciones, operaciones, restricciones, etc.
+2. Nivel conceptual: tiene un esquema conceptual que describe la estructura de toda la base de datos para todo el conjunto de usuarios, es decir de única visión, ocultando detalles técnicos del almacenamiento, enfocándose en tipos de datos, relaciones, operaciones, restricciones, etc.
 3. Nivel externo o de vista: tiene un esquema externo / vistas de usuario que describe la parte de la base de datos de interés para un grupo particular de usuarios ocultando el resto.
 
 también se conoce como arquitectura ANSI/SPARC
 
 ![[Pasted image 20250321140240.png]]
 
-
+El concepto de mapeado conceptual/interno y externo, hace referencia a cuanto es posible modificar en cada esquema hasta que se termine requiriendo modificar otro de los esquemas, debido a que el mapeado entre ambos se corresponde solo entre algunos de sus elementos y no todos.
