@@ -139,12 +139,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bases de datos/Estructuras de indexación para ficheros.md",
+                "file": "Bases de datos/Normalización de bases de datos relacionales.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Estructuras de indexación para ficheros"
+              "title": "Normalización de bases de datos relacionales"
             }
           }
         ],
@@ -295,25 +295,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5095f6c981ac79f4",
+  "active": "7c0d61c94b9e92c3",
   "lastOpenFiles": [
-    "Bases de datos/Almacenamiento de bases de datos.md",
+    "Pasted image 20250409220313.png",
+    "Bases de datos/Bases de datos - Introduccion.md",
+    "Bases de datos/Bases de datos relacionales.md",
     "Bases de datos/Estructuras de indexación para ficheros.md",
+    "Bases de datos/Almacenamiento de bases de datos.md",
+    "Bases de datos/Arquitecturas para la DBMS.md",
+    "Pasted image 20250405175249.png",
+    "Pasted image 20250405162720.png",
+    "Pasted image 20250405161834.png",
+    "Pasted image 20250405155014.png",
+    "Bases de datos/Normalización de bases de datos relacionales.md",
+    "Bases de datos/Estructura del DBMS.md",
+    "Pasted image 20250405143820.png",
     "Pasted image 20250402144639.png",
     "Pasted image 20250402141824.png",
     "Pasted image 20250402134637.png",
     "Pasted image 20250402125437.png",
     "Pasted image 20250402125433.png",
-    "Bases de datos/Arquitecturas para la DBMS.md",
-    "Bases de datos/Bases de datos - Introduccion.md",
-    "Bases de datos/Normalización de bases de datos relacionales.md",
-    "Bases de datos/Estructura del DBMS.md",
-    "Bases de datos/Bases de datos relacionales.md",
-    "Pasted image 20250402115734.png",
-    "Pasted image 20250401231040.png",
-    "Pasted image 20250401223403.png",
-    "Pasted image 20250401220938.png",
-    "Pasted image 20250401213133.png",
     "Desarrollo de software/desarrollo web.md",
     "Desarrollo de software/Introducción a desarrollo de software.md",
     "Desarrollo de software/Sitios estáticos y SPA.md",

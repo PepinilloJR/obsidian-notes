@@ -43,7 +43,7 @@ por ejemplo, si tenemos una relación que se basa en las prestaciones de libros,
 
 **Primera forma Normal (1FN)**
 
-Una relación se encuentra en 1FN si todos los dominios simples de los atributos contienen valores atómicos (nombre, fecha, teléfono -uno solo- son ejemplos) y monovalentes (los valores de los atributos no se repiten en otras tuplas refiriéndonos a claves primarias)
+Una relación se encuentra en 1FN si todos los dominios simples de los atributos contienen valores atómicos (nombre, fecha, teléfono -uno solo- son ejemplos) y sus claves primarias son monovalentes (los valores de los atributos no se repiten en otras tuplas refiriéndonos a claves primarias)
 
 ejemplos de valores no atómicos pueden ser atributos como 
 "Sucursal y numero de factura"
@@ -74,7 +74,9 @@ la solución para estos casos es extraer el atributo No clave y enviarlo a otra 
 
 **Tercera Forma Normal (3FN)**
 
-Una relación 2FN es 3FN si ademas ningún subconjunto de atributos no claves tiene dependencia funcional entre si, donde transitivamente dependen también de la clave primaria PK.
+Una relación 2FN es 3FN si ademas ningún subconjunto de atributos no claves tiene dependencia funcional entre si, donde transitivamente dependen también de la clave primaria PK, en otras palabras, si los atributos no claves tienen dependencia funcional completa con la PK.
+
+Este ejemplo es mas bien de forma 2FN, oops
 
 ![[Pasted image 20250323003555.png]]
 
@@ -88,3 +90,27 @@ Resultando así normalizada en 3FN. habiendo cumplido los objetivos de:
 * Facilitar el mantenimiento de los datos y programas que los acceden
 * Evitar anomalías al operar los datos
 * Reducir el impacto de los cambios en los datos
+
+### Relaciones uno a muchos
+
+las relaciones uno a muchos se dan cuando uno de los modelos, referencia a otro modelo con la posibilidad de ser muchos, es decir, una relación A puede asociarse a mas de una relación B.
+
+para situaciones así, para mantener la normalizacion de la base de datos, la relación que se asocia a muchos, debe ser reverenciada en las relaciones individuales mediante una clave foránea, 
+Y NO POR EL CONTRARIO, la relación tener múltiples claves foráneas a cada relación asociada, esto debe evitarse.
+
+Un ejemplo, aquí, un perro puede tener múltiples posibles padres, cada uno con una probabilidad distinta de ser el padre verdadero, por lo tanto, cada relación padre, tiene una clave foránea a un perro, y una clave foránea al perro mismo que es padre, formando así una clave primaria única, y que resuelve el problema de uno a muchos
+
+![[Pasted image 20250409220313.png]]
+
+### Relaciones muchos a muchos
+
+las relaciones muchos a muchos son algo mas complejas, y suelen requerir utilizar una relación intermedia para solucionarlas
+
+la relación muchos a muchos se da cuando una relación A se asocia a múltiples relaciones B, y a su vez, cada relación B se asocia a múltiples relaciones A
+
+la solución común es utilizar una relación intermedia C, con PK formada por las claves foráneas de A y B, haciendo que se asocie con una relación A y una relación B, sirviendo así de camino entre las relaciones A y B
+
+Un ejemplo, se da la situación en la que una empresa puede tener múltiples directores, a su vez, luego, una persona puede pertenecer a la junta de múltiples empresas, es decir, asociarse a mas de una empresa como director.
+Para solucionar esto, podemos crear una relación intermedia denominada director, un director tiene como clave primaria las claves foráneas de una persona y una empresa, 
+de este modo, las empresas tienen múltiples directores, y a su vez, una persona puede ser director de múltiples empresas.
+
