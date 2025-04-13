@@ -44,4 +44,93 @@ Luego existen otras tags mas funcionales, como form, aquí una descripción cort
 Uno muy importante para la accesibilidad del usuario sera label
 
 ![[Pasted image 20250326000708.png]]
-#### CSS
+### CSS
+
+CSS es un lenguaje de hojas de estilo en cascada (Cascade stylesheet o simplemente stylesheet) que da estilo a los elementos HTML
+
+esto lo hace mediante reglas de estilo, que son un conjunto de instrucciones como se debe presentar un elemento HTML especifico, o elementos HTML con un ID especifico, o con un CLASS especifico, entre otras posibles condiciones
+
+un ejemplo de esto es la siguiente regla de estilo:
+
+![[Pasted image 20250410173011.png]]
+
+### Selectores:
+
+Como vimos, los selectores son como una condición, ya sea especificada por un elemento HTML, un ID, una clase, etc.
+
+También es posible selectores mas avanzados, donde podemos seleccionar un elemento y aplicar la regla de estilo, bajo la condición de un estado especifico, una parte especifica del elemento HTML.
+
+![[Pasted image 20250410173456.png]]
+
+Podemos adicionalmente aplicar selectores jerárquicos, es decir, tomar en consideración el orden de los elementos HTML a la hora de aplicar el estilo.
+
+![[Pasted image 20250410173504.png]]
+
+### Escritura de reglas CSS
+
+Las reglas de CSS pueden ser aplicadas de tres formas al HTML.
+
+1. Escribiendo las reglas en un archivo externo e importándolas
+
+```
+<link href="styles/style.css" rel="stylesheet" type="text/css">
+```
+
+2. Dentro del Head del HTML, mediante un elemento Style
+
+```
+<head>
+<style>
+p { color: red; }
+</style>
+</head>
+```
+
+3. En linea, directamente sobre el elemento HTML, escribiendo la regla en un string.
+
+```
+<p style="color: blue; text-align: center;">
+```
+
+### Especificidad de selectores
+
+la especificidad de selectores hace referencia a, mientras mas especifico sea el selector, tendrá mayor prioridad frente a otros menos específicos, si se esta aplicando estilos al mismo elemento (conflictos), específicamente, tendrá mas prioridad la propiedad dentro de la regla, si en la otra regla de estilo aplicada también esta siendo
+
+```
+/* Menos específico */
+p {
+  color: red;
+}
+
+/* Más específico */
+div p {
+  color: blue;
+}
+
+/* Mucho más específico */
+#mi-id p {
+  color: green;
+}
+```
+
+es posible sobrescribir esta característica de CSS utilizando la regla 
+!importante, del siguiente modo:
+
+```
+p {
+  color: red !important;
+}
+```
+
+### Variables o Propiedades personalizadas
+es posible crear variables en CSS, de modo que se pueda referenciar valores de propiedades para usarse en diferentes lugares, ahorrando volver a definir todo.
+
+estas se definen con el formato
+
+```
+--Nombre-variable : valor
+```
+
+luego, puede utilizarse de modo que:
+
+![[Pasted image 20250410175245.png]]

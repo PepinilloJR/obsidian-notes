@@ -62,7 +62,7 @@ la corrección es mas compleja, requiriendo transformar la relación o incluso d
 
 **Segunda Forma Normal (2FN)**
 
-Una relación 1FN es 2FN si ademas, todos los atributos No clave, dependen por completo de la clave primaria, y no debería poder encontrarse dependencias con otros atributos No clave.
+Una relación 1FN es 2FN si ademas, todos los atributos No clave, dependen por completo de la clave primaria, y no debería poder encontrarse dependencias con otros subconjuntos No clave.
 
 ![[Pasted image 20250322235345.png]]
 
@@ -74,9 +74,8 @@ la solución para estos casos es extraer el atributo No clave y enviarlo a otra 
 
 **Tercera Forma Normal (3FN)**
 
-Una relación 2FN es 3FN si ademas ningún subconjunto de atributos no claves tiene dependencia funcional entre si, donde transitivamente dependen también de la clave primaria PK, en otras palabras, si los atributos no claves tienen dependencia funcional completa con la PK.
+Una relación 2FN es 3FN si ademas ningún subconjunto de atributos no claves tiene dependencia funcional entre si, donde transitivamente dependen también de la clave primaria PK
 
-Este ejemplo es mas bien de forma 2FN, oops
 
 ![[Pasted image 20250323003555.png]]
 
@@ -113,4 +112,3 @@ la solución común es utilizar una relación intermedia C, con PK formada por l
 Un ejemplo, se da la situación en la que una empresa puede tener múltiples directores, a su vez, luego, una persona puede pertenecer a la junta de múltiples empresas, es decir, asociarse a mas de una empresa como director.
 Para solucionar esto, podemos crear una relación intermedia denominada director, un director tiene como clave primaria las claves foráneas de una persona y una empresa, 
 de este modo, las empresas tienen múltiples directores, y a su vez, una persona puede ser director de múltiples empresas.
-
