@@ -9,6 +9,13 @@ El numero de atributos se denomina ***grado de la relación***, es estático y e
 finalmente, denominaremos ***dominio*** al conjunto de posibles valores para cada atributo, siendo así **la restricción de lo que se quiere que el atributo represente**, 
 por ejemplo, un Legajo es un numero entero positivo mayor que cero, siendo ese el dominio del atributo Legajo, el dominio es por lo tanto un conjunto de valores atómicos. esto se denomina como ***restricción de dominio*** 
 
+El modelo relacional garantiza las siguientes propiedades ACID
+
+* Atomicidad: Una transacción debe ejecutarse como unidad de trabajo, es decir como una única operación.
+* Consistencia: Toda transacción llevará, la base de datos, de un estado válido a otro también válido y consistente.
+* Aislamiento: Esto asegura que la realización de dos transacciones, sobre la misma información, sean independientes y no generen ningún tipo de error, asegurando que una operación no afecte a otras, es decir, cada transacción es independiente del resto.
+* Durabilidad: asegura que, una vez realizada la transacción, esta persistirá y no se podrá deshacer.
+
 #### Propiedades de las relaciones
 
 1. No existe orden en las tuplas ni en las columnas

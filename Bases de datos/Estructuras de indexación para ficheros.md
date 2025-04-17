@@ -33,10 +33,18 @@ las inserciones nuevas se guardan en un archivo de desbordamiento, luego, cada b
 Si los registros del fichero están ordenados físicamente por un campo no clave (es decir, un valor que puede repetirse para mas de un registro), se lo denomina campo agrupado.
 
 El indice agrupado es entonces un fichero ordenado de registros de dos campos, el primero es del mismo tipo que el campo agrupado del fichero de datos, el segundo sera un puntero a un bloque de registros.
+
 Aquí, el indice agrupado tendrá una entrada por cada valor distinto del campo agrupado, por lo tanto también es escaso, ademas, presenta los mismos problemas a la hora de inserción y eliminación de datos, aunque presenta una solución adicional, que es reservar un bloque o bloques contiguos por cada valor distinto campo de indexacion, pudiendo lograr para muchos una inserción directa
 esto es porque como todos mantienen el mismo campo de ordenación, da igual la posición donde se colocan dentro del bloque del registro.
 
+en este ejemplo, el puntero es al bloque donde aparece el primer registro con el campo de agrupamiento buscado (NO EL REGISTRO, NO APUNTA AL REGISTRO MOGÓLICO)
+
 ![[Pasted image 20250405155014.png]]
+
+pero nosotros podemos agrupar bloques del fichero solo con los registros que presenten uno de los valores del campo de agrupamiento, y agregar al final punteros hacia mas bloques con mas registros en las mismas condiciones
+
+![[Pasted image 20250416225046.png]]
+
 
 ### Índices secundarios.
 

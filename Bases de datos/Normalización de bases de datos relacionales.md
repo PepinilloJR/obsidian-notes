@@ -30,14 +30,13 @@ Dada la relación R, el atributo Y de R depende funcionalmente de forma completa
 
 aquí hablamos de subconjunto, ya que ponemos considerar que X es una combinación de múltiples atributos, donde si hay dependencia funcional completa por parte de Y, entonces si tomamos un subconjunto de X y lo quitamos de la relación, Y ya no tendrá ninguna dependencia funcional, haciéndola así funcional completa de X
 
-si X es un solo atributo, entonces cualquier dependencia funcional de la forma 
-R.X  á R.Y es **siempre completa**.
+si X es un solo atributo, entonces cualquier dependencia funcional de la forma R.X á R.Y es **siempre completa**.
 
 ##### Dependencia Funcional Transitiva:
 
-la dependencia funcinal transitiva se da cuando un atributo Y de R depende funcionalmente de X, y a su vez, dada otra relacion S, un atributo Z de S depende funcionalmente de Y de S, entonces por transitvidad, Z de S depende funcionalmente de X de R
+la dependencia funcional transitiva se da cuando un atributo Y de R depende funcionalmente de X, y a su vez, dada otra relación S, un atributo Z de S depende funcionalmente de Y de S, entonces por transitividad, Z de S depende funcionalmente de X de R.
 
-por ejemplo, si tenemos una relación que se basa en las prestaciones de libros, se puede dar que un préstamo contenga el ID del libro, y el genero, a su vez, un libro contiene un genero en su relación, por lo tanto, se da una dependencia funcional transitiva, y puede descartarse el genero en la relación préstamo, ya que este se puede conocer por el libro 
+Por ejemplo, si tenemos una relación que se basa en las prestaciones de libros, se puede dar que un préstamo contenga el ID del libro, y el genero, a su vez, un libro contiene un genero en su relación, por lo tanto, se da una dependencia funcional transitiva, y puede descartarse el genero en la relación préstamo, ya que este se puede conocer por el libro 
 
 ##### Formas normales:
 
@@ -66,7 +65,7 @@ Una relación 1FN es 2FN si ademas, todos los atributos No clave, dependen por c
 
 ![[Pasted image 20250322235345.png]]
 
-por ejemplo, en detalle factura, id articulo, que forma parte de la PK, nombre articulo tiene una dependencia con esta, no cumpliendo así la condición de la 2FN
+Por ejemplo, en detalle factura, id articulo, que forma parte de la PK, nombre articulo tiene una dependencia con esta, no cumpliendo así la condición de la 2FN
 
 la solución para estos casos es extraer el atributo No clave y enviarlo a otra relación donde la PK sea el atributo con el que creaba una dependencia, luego, en la relación original, hacer FK al atributo del que dependía el No clave.
 
@@ -76,11 +75,11 @@ la solución para estos casos es extraer el atributo No clave y enviarlo a otra 
 
 Una relación 2FN es 3FN si ademas ningún subconjunto de atributos no claves tiene dependencia funcional entre si, donde transitivamente dependen también de la clave primaria PK
 
-
 ![[Pasted image 20250323003555.png]]
 
-Puede verse que esto mismo sucede en la forma 2FN, donde "cliente" depende de "id cliente" y "forma de pago" depende de "id pago"
-la solución es la misma que en la 2FN.
+Puede verse en este ejemplo una situación donde no se cumple la 3FN, donde "cliente" depende de "id cliente" y "forma de pago" depende de "id pago", estos son valores no clave con dependencias funcionales entre si.
+
+La solución es la misma que en la 2FN, agregamos nuevas tablas de modo que los valores de esta tengan dependencia funcional transitiva con la PK de la relación original, y de modo que no presenten dependencia con otro valor no clave de esta, si no que la tengan en una nueva relación con una nueva PK que esta compuesta por el valor del que dependía en la forma anterior.
 
 ![[Pasted image 20250323003740.png]]
 
@@ -92,9 +91,9 @@ Resultando así normalizada en 3FN. habiendo cumplido los objetivos de:
 
 ### Relaciones uno a muchos
 
-las relaciones uno a muchos se dan cuando uno de los modelos, referencia a otro modelo con la posibilidad de ser muchos, es decir, una relación A puede asociarse a mas de una relación B.
+Las relaciones uno a muchos se dan cuando uno de los modelos, referencia a otro modelo con la posibilidad de ser muchos, es decir, una relación A puede asociarse a mas de una relación B.
 
-para situaciones así, para mantener la normalizacion de la base de datos, la relación que se asocia a muchos, debe ser reverenciada en las relaciones individuales mediante una clave foránea, 
+Para situaciones así, para mantener la normalizacion de la base de datos, la relación que se asocia a muchos, debe ser referenciada en las relaciones individuales mediante una clave foránea, 
 Y NO POR EL CONTRARIO, la relación tener múltiples claves foráneas a cada relación asociada, esto debe evitarse.
 
 Un ejemplo, aquí, un perro puede tener múltiples posibles padres, cada uno con una probabilidad distinta de ser el padre verdadero, por lo tanto, cada relación padre, tiene una clave foránea a un perro, y una clave foránea al perro mismo que es padre, formando así una clave primaria única, y que resuelve el problema de uno a muchos
@@ -111,4 +110,4 @@ la solución común es utilizar una relación intermedia C, con PK formada por l
 
 Un ejemplo, se da la situación en la que una empresa puede tener múltiples directores, a su vez, luego, una persona puede pertenecer a la junta de múltiples empresas, es decir, asociarse a mas de una empresa como director.
 Para solucionar esto, podemos crear una relación intermedia denominada director, un director tiene como clave primaria las claves foráneas de una persona y una empresa, 
-de este modo, las empresas tienen múltiples directores, y a su vez, una persona puede ser director de múltiples empresas.
+de este modo, las empresas tienen múltiples directores, y a su vez, una persona puede ser director de múltiples empresas, luego, un director solo puede ser una persona y pertenecer a la dirección de una sola empresa
