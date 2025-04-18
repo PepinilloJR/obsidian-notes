@@ -9,7 +9,7 @@ En si, un modelo de datos es una colección de herramientas conceptuales que bri
 
 Podemos ver en el gráfico una descripción simplificada del proceso para diseñar una base de datos.
 
-Lo importante es ver que, luego de la recopilación de requisitos y su análisis, el siguiente paso es crear un ***esquema conceptual***, que es una descripción concisa de los requisitos de los datos, tipos de entidades, relaciones, restricciones, esto se realiza haciendo uso de un ***modelo de datos conceptual de alto nivel***, nosotros mencionamos que los modelos de datos sirven para describir las estructuras, conceptos y reglas aplicadas a los datos, esto se realiza desde un ***nivel alto de abstracción***, no nos importan estructuras internas de implementacion.
+Lo importante es ver que, luego de la recopilación de requisitos y su análisis, el siguiente paso es crear un ***esquema conceptual***, que es una descripción concisa de los requisitos de los datos, tipos de entidades, relaciones, restricciones de ***una base de datos especifica*** (esto lo diferencia del propio modelo), esto se realiza haciendo uso de un ***modelo de datos conceptual de alto nivel***, nosotros mencionamos que los modelos de datos sirven para describir las estructuras, conceptos y reglas aplicadas a los datos, esto se realiza desde un ***nivel alto de abstracción***, no nos importan estructuras internas de implementacion.
 todo este proceso se denomina ***diseño conceptual***, que haciendo uso de un modelo de datos conceptual, obtiene un **esquema conceptual** de la base de datos que necesita el cliente
 
 el siguiente paso es realizar la implementacion real, mediante un DBMS, el DBMS creara entonces un ***esquema lógico*** mediante lo que se denomina un ***modelo de datos de implementacion***, en el proceso de ***diseño lógico***, luego este esquema lógico es la base para finalmente le diseño físico de la base de datos.
@@ -92,6 +92,78 @@ pero el principal problema es a la hora de crear relaciones unos a muchos y much
 
 ![[Pasted image 20250417180737.png]]
 
-Al presentar limitaciones tan grandes ambos modelos, resulto un alivio el modelo relacional de datos, el cual esta desarrollado en el markdown de bases de datos relacionales
+Al presentar limitaciones tan grandes ambos modelos, resulto un alivio el modelo relacional de datos, que presenta un ***DBMS relacional (RDBMS)***, el cual esta desarrollado en el markdown de bases de datos relacionales
 
-### Modelo NoSQL
+### Modelos NoSQL
+
+los modelos ***NoSQL*** son otro tipo de bases de datos, también denominados ***Bases de datos No relacionales***, se implementan mediante un DBMS y presentan las siguientes características que las distinguen de los otros modelos:
+
+* ***No necesitan un esquema de datos para operar***, es decir, los datos pueden almacenarse de diferentes formas, con diferentes estructuras, que no necesitan estar predefinidas en el sistema de bases de datos
+* Son ***mas rápidos en el desarrollo***, al no necesitar pensar en un esquema de datos de antemano, el diseño, etc. esto acelera la codificación del sistema
+* Se puede conseguir un ***mapeo mas directo*** entre los datos de la base de datos y los objetos/datos de un programa en diversos lenguajes de programación
+* Al no tener un esquema predefinido, es ***altamente flexible***, permitiendo el poder adaptarse a datos con estructuras cambiantes
+* Permiten manejar de forma optima grandes bancos de informacion (big data) y la ***escabilidad horizontal***, esto es, añadir mayor capacidad a la totalidad de la base de datos agregando otros servidores de bases de datos, repartiendo los datos entre cada una de las maquinas, también denominado fragmentacion. Esto ultimo es mas complejo en bases de datos SQL, debido a los propiedades ACID, y pudimos verlo en arquitecturas distribuidas que suelen involucrar escabilidad horizontal de datos, las bases de datos NoSQL no presentan tantas dificultades al no priorizar las ACID
+
+![[Pasted image 20250418144952.png]]
+
+* Las bases de datos NoSQL están ***pensadas para ser distribuidas***, trabajando en clusters, que como vimos da la posibilidad de una escabilidad mas rápida y sencilla de estos, por lo que permiten la replicacion y la distribución de datos en múltiples servidores de bases de datos
+* Transacciones ***BASE*** en lugar de ACID, que viene de ***coherencia eventual flexible básicamente disponible***, básicamente disponible porque permite el acceso concurrente de la base de datos, flexible porque los datos tendrán estados transitorios, que cambiaran con el tiempo sin necesidad de un usuario, por ejemplo, al subir una publicación en una red social, el cambio no sera visible de forma inmediata para todos los usuarios, pero se actualizara en algún momento para todos. Coherencia eventual se refiere a que, cada nodo podrá tener valores diferentes en sus datos, pero cuando las actualizaciones simultaneas a estos registros finalicen, los nodos que contienen estos registros alcanzaran la coherencia.
+
+El modelo NoSQL presenta diferentes tipos:
+
+### Modelo NoSQL clave-valor
+
+El modelo clave-valor es sencillo en cuanto a funcionalidad, cada elemento esta identificado por una llave única, permitiendo su recuperación rápida, es comparable a un Hash-Map.
+Este modelo puede no ser adecuado en situaciones de acceso por valor (falta de indices), actualizaciones frecuentes de estos valores (se debe escribir el registro completo de nuevo) o si debemos almacenar relaciones entre los diferentes registros.
+
+![[Pasted image 20250418160430.png]]
+
+### Modelo NoSQL documental
+
+Se almacenan los datos en un formato de documento, que pueden ser XML, JSON, BSON, etc.
+no se requiere de una estructura definida para el documento, lo que brinda mas ***flexibilidad al momento de almacenar datos con nuevas estructuras.***
+
+Este modelo puede presentar algunas inconsistencias, debido a que, al ser agregado, cada documento debe contener todos los valores asociados al objeto que se busca, y se pueden dar situaciones como la que se presenta a continuación, donde los datos de alumno están en el componente Alumnos, pero también en el de inscripciones, pudiendo presentar inconsistencia entre ambos si se modificara alguno de sus documentos
+
+(notar que documentos es cada objeto y el archivo es el componente)
+
+![[Pasted image 20250418165003.png]]
+
+presenta una ventaja con respecto a los Key-Value, al poder recuperar documentos por valor, la posibilidad de crear indices para la búsqueda, y la posibilidad de modificar solo porciones de un documento
+
+![[Pasted image 20250418160848.png]]
+
+### Modelo NoSQL de grafos
+
+El modelo de grafos almacena los datos que están relacionados entre si, bajo muchos niveles, se presentan entonces dos elementos: Los nodos, que representan entidades, y las relaciones o aristas, que representan las relaciones entre los nodos.
+
+Los datos de los nodos se almacenan en un formato clave-valor
+
+![[Pasted image 20250418161513.png]]
+### Modelo NoSQL columnar
+
+El modelo columnar en el contexto de bases de datos NoSQL se caracteriza por almacenar los datos organizados por columnas en lugar de por filas, lo que lo diferencia de los modelos relacionales tradicionales. Aunque su nombre puede recordar a las bases de datos relacionales, este es un enfoque más flexible y distribuido, que no sigue las propiedades ACID estrictamente.
+
+Cada fila representa un registro de datos y está identificada por una clave única (key-value). Las columnas, agrupan los campos de los registros, aquí no todas las filas necesitan tener las mismas columnas, ademas, esta estructura permite agrega columnas a las tablas a medida que se vaya requiriendo, en lugar de crear una nueva tabla para una nueva estructura de datos
+
+Se utilizan estructuras denominadas **supercolumnas**, que permiten agrupar múltiples columnas bajo una misma clave o nombre de columna, facilitando una forma de agregación dentro del propio modelo de datos (es decir, agrupar múltiples campos relacionados como una unidad).
+
+Una de las ventajas clave del modelo columnar NoSQL es el rendimiento en operaciones de lectura sobre columnas específicas. Por ejemplo, si se quiere contar cuántos alumnos cursan la materia “GDA”, no es necesario recorrer todas las filas completas: basta con acceder a la columna (o supercolumna) correspondiente a esa materia y realizar el conteo directamente, ya que los datos pueden estar organizados para que esa operación sea eficiente, es decir, en una tabla, las columnas de alumno y materia están colocadas de modo que se asocia a cada alumno una correspondiente materia, lo que hace posible realizar el conteo desde la columna materia sin preocuparse si se esta asociando a un alumno, ya que esta asociación esta implícita en la estructura de la tabla. Este enfoque evita la necesidad de relaciones complejas entre tablas, ya que los datos relacionados suelen almacenarse juntos dentro de una misma fila o columna agrupada, optimizando así las consultas típicas del modelo.
+
+![[Pasted image 20250418170206.png]]
+
+### Modelos agregados y modelos dispersos
+
+Los modelos que vimos, Clave-valor, orientados a documentos y orientados a columnas pertenecen al grupo denominado Modelos agregados, denominados así porque tratan al conjunto de datos como una unidad, denominado un ***agregado***, es decir, una vez que se obtiene el agregado, ***se tiene todo el conjunto de datos del objeto que buscamos***, en una base de datos relacional esto requeriría combinar datos de múltiples tablas para tener al objeto completo
+
+Los modelos dispersos, como el modelo orientado a grafos, los datos están distribuidos en múltiples entidades separadas, que están relacionadas, no están agrupadas en una sola entidad por lo que la recuperación de datos requerirá acceder a múltiples entidades
+
+### Clasificación de los DBMS 
+
+nosotros podemos ver que, al existir múltiples modelos de datos, existirán múltiples DBMSs 
+y estos podrán clasificarse según los siguientes criterios:
+
+* Modelo de datos usado: RDBMS, OODBMS, NoSql, entre otros
+* Numero de sitios: Centralizado o distribuido (homogéneo o heterogéneo)
+* Costo de su uso
+* Proposito: puede ser de uso general o especial para un objetivo especifico de la organizacion

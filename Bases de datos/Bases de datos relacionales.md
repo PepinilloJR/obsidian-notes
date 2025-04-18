@@ -1,6 +1,6 @@
 el modelo relacional es el modelo mas importante y usado actualmente para las bases de datos orientados a registros.
 
-el concepto fundamental es que los datos se representan en una estructura tabular de filas (tuplas) y columnas de valores (atributos), **denominadas relaciones** (las tablas)
+Una base de datos relacional organiza los datos en una estructura tabular de filas (tuplas) y columnas de valores (atributos), **denominadas relaciones** (las tablas), se denominan así y se dice que es ***relacional*** porque esta basado en el concepto matemático de las relaciones en la teoría de conjuntos.
 
 ![[Pasted image 20250321172845.png]]
 
@@ -9,7 +9,7 @@ El numero de atributos se denomina ***grado de la relación***, es estático y e
 finalmente, denominaremos ***dominio*** al conjunto de posibles valores para cada atributo, siendo así **la restricción de lo que se quiere que el atributo represente**, 
 por ejemplo, un Legajo es un numero entero positivo mayor que cero, siendo ese el dominio del atributo Legajo, el dominio es por lo tanto un conjunto de valores atómicos. esto se denomina como ***restricción de dominio*** 
 
-El modelo relacional garantiza las siguientes propiedades ACID
+El modelo relacional garantiza las siguientes propiedades ***ACID*** en sus datos:
 
 * Atomicidad: Una transacción debe ejecutarse como unidad de trabajo, es decir como una única operación.
 * Consistencia: Toda transacción llevará, la base de datos, de un estado válido a otro también válido y consistente.
@@ -18,7 +18,8 @@ El modelo relacional garantiza las siguientes propiedades ACID
 
 #### Propiedades de las relaciones
 
-1. No existe orden en las tuplas ni en las columnas
+El modelo relacional tendrá las siguientes propiedades en sus tablas de datos o relaciones:
+1. No existe orden en las tuplas (registros) ni en las columnas (campos/atributos)
 2. Cada fila debe ser y es única por al menos un atributo
 3. Los valores son atómicos
 4. Valor Null como valor desconocido, la falta de un valor en un atributo es posible

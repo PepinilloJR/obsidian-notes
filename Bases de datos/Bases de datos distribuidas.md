@@ -7,9 +7,9 @@ para comprender estas, debemos introducirnos a nuevos conceptos adicionales que 
 
 ## Conceptos de las BDD
 
-las bases de datos distribuidas se basan en un **sistema de computación distribuido**, este consiste en un numero de ***elementos, sitios, nodos***, de procesamiento, interconectados mediante una red de computadoras, cooperando entre ellos para realizar tareas.
+las bases de datos distribuidas se basan en un **sistema de computación distribuido**, este consiste en un numero de ***elementos, sitios, nodos***, de procesamiento, interconectados mediante una red de computadoras, cooperando entre ellos para realizar tareas, que se visualizan como una sola base de datos o cumputador, a todo esto se lo define como un ***Cluster***.
 
-ahora bien, definimos a una base de datos distribuida (BDD, o DDB) como una colección de múltiples bases de datos interrelacionadas de forma lógica mediante una red de computadoras o servidores
+Ahora bien, definimos a una base de datos distribuida (BDD, o DDB) como una colección de múltiples bases de datos interrelacionadas de forma lógica mediante una red de computadoras o servidores
 
 la administración de esta base de datos se da mediante un sistema de administración de bases de datos distribuidas (DDBMS), el encargado de administrar la BDD, ejecutándose en cada uno de los nodos o ***sitios*** (un sistema de BD en si mismo con su hardware, software, usuarios y datos) de la red de computadoras, y se encarga de hacer **transparente*** al usuario esta distribución, es decir, el usuario vera todo como si fuera una única base de datos ejecutándose en su computadora, no necesita saber donde esta conectado, como se transfieren los datos, ni detalles del estilo.
 
@@ -134,7 +134,7 @@ La conexión puede realizarse a través de una ***red de área local*** o una **
 
 ### Tipos de sistemas de BDD (DDBMS)
 
-se toman diferentes factores para categorizar los DDBMS, uno de estos es el ***grado de homogeneidad del software del DDBMS***, si todos los servidores y usuarios usan el mismo software, el DDBMS es homogéneo, por lo contrario si utilizan diferentes software para cada sitio, es heterogéneo.
+se toman diferentes factores para categorizar los DDBMS, uno de estos es el ***grado de homogeneidad del software del DDBMS***, si todos los servidores y usuarios usan el mismo software, el DDBMS es homogéneo, por lo contrario si utilizan diferentes software para cada sitio, es heterogéneo, se dice que es un ***Cluster homogéneo/heterogéneo***.
 
 Luego esta el ***grado de autonomía local***, si el sitio local no es capaz de funcionar por su cuenta como un DBMS aislado, se dice que no tiene autonomía local, por el contrario, mientras menos dependa un sitio de otros para funcionar, tendrá un mayor grado de autonomía local, idealmente cada nodo debería tener un alto grado de autonomía local
 
