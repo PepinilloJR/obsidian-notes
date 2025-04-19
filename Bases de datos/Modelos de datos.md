@@ -137,7 +137,7 @@ presenta una ventaja con respecto a los Key-Value, al poder recuperar documentos
 
 El modelo de grafos almacena los datos que están relacionados entre si, bajo muchos niveles, se presentan entonces dos elementos: Los nodos, que representan entidades, y las relaciones o aristas, que representan las relaciones entre los nodos.
 
-Los datos de los nodos se almacenan en un formato clave-valor
+Los datos de los nodos se almacenan en un formato clave-valor, a su vez, las relaciones pueden tener datos en si mismos, por ejemplo, una relación alumno inscrito en comisión, podría existir el dato de fecha de inscripción
 
 ![[Pasted image 20250418161513.png]]
 ### Modelo NoSQL columnar
@@ -157,6 +157,10 @@ Una de las ventajas clave del modelo columnar NoSQL es el rendimiento en operaci
 Los modelos que vimos, Clave-valor, orientados a documentos y orientados a columnas pertenecen al grupo denominado Modelos agregados, denominados así porque tratan al conjunto de datos como una unidad, denominado un ***agregado***, es decir, una vez que se obtiene el agregado, ***se tiene todo el conjunto de datos del objeto que buscamos***, en una base de datos relacional esto requeriría combinar datos de múltiples tablas para tener al objeto completo
 
 Los modelos dispersos, como el modelo orientado a grafos, los datos están distribuidos en múltiples entidades separadas, que están relacionadas, no están agrupadas en una sola entidad por lo que la recuperación de datos requerirá acceder a múltiples entidades
+
+### Resumen de diferencias principales entre NoSQL y Relacionales
+
+![[Pasted image 20250418191838.png]]
 
 ### Clasificación de los DBMS 
 
