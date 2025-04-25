@@ -1,14 +1,14 @@
 ### Arquitectura centralizada
 
-la arquitectura centralizada es la mas primigenia, proporcionaba un mainframe que provee de absolutamente todas las funcionalidades del sistema, incluyendo la del DBMS, accediendo cada usuario a través de una terminal.
+la arquitectura centralizada es la mas primigenia, proporcionaba un mainframe que provee de absolutamente todas las funcionalidades del sistema de datos, incluyendo la del DBMS, accediendo cada usuario a través de una terminal.
 
 ![[Pasted image 20250401203904.png]]
 ### Arquitecturas cliente / servidor básicas:
 
-El modelo cliente / servidor aplicado a SO, donde se definen servidores especializados para funcionalidades especificas y sirven servicios a clientes en una red, esto es aplicable también al DBMS 
+El modelo cliente / servidor ampliamente aplicado a sistemas operativos, en el cual se definen servidores especializados para funcionalidades especificas y sirven servicios a clientes en una red, a partir de este modelo se implementan DBMS de arquitectura Cliente / Servidor en dos capas y múltiples capas
 
 ![[Pasted image 20250401213133.png]]
-### Cliente / servidor de dos capaz
+### Cliente / servidor de dos capas
 
 aquí, denominamos al servidor como servidor de consultas o transacciones, proveyendo estas dos funcionalidades, también denominado servidor SQL en un DBMS relacional
 
