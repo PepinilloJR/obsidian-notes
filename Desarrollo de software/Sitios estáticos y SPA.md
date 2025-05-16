@@ -32,12 +32,16 @@ A su vez, para cada petición, el servidor debe enviar una respuesta al cliente,
 
 ![[Pasted image 20250327162749.png]]
 
+### Estructura URL HTTP
+Una URL (Uniform Resource Locator) se utiliza para ubicar un recurso provisto por un servidor en el Internet, NO ES EXCLUSIVO DE HTTP (FTP, SSH, archivos locales en una maquina, etc.)
+
+![[Pasted image 20250427202207.png]]
 ### HTTPS y HTTP
 
 HTTP originalmente es un protocolo de transferencias que no cifra la información que es enviada a través del servidor o el cliente
 
 Esto genera problemas y posibilita vulnerabilidades como un **man in the middle.**
 
-una solución es el protocolo HTTPS, una versión mas segura y cifrada de HTTP, que ademas tiene peculiaridades como la necesidad de un certificado SSL, esto en general lleva algo mas de trabajo para el ingeniero, pero bueno, es mas seguro
+Una solución es el protocolo HTTPS, una versión mas segura y cifrada de HTTP, que ademas tiene peculiaridades como la necesidad de un certificado SSL, esto en general lleva algo mas de trabajo para el ingeniero, pero bueno, es mas seguro
 
-esto no significa que una pagina HTTP sea peligrosa de por si, solo que se debe tener mas cuidado con el tipo de información que se enviara a través de esta.
+Esto no significa que una pagina HTTP sea peligrosa de por si, solo que se debe tener mas cuidado con el tipo de información que se enviara a través de esta.

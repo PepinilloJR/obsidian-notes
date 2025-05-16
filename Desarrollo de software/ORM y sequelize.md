@@ -384,3 +384,100 @@ const sumSalarios = await Usuario.sum('salario');
 y ***son compatibles con [Op]***
 
 ### Consultas RAW
+
+Sequelize permite ejecutar consultas SQL directas, estas se denominan ***consultas RAW***.
+
+para ello se utiliza el método .***query*** que toma como parámetro un string contenedor de la consulta, y un objeto con indicaciones del tipo de consulta:
+
+```
+const resultado = await sequelize.query(
+"SELECT * FROM usuarios WHERE edad > 30",
+{ type: QueryTypes.SELECT }
+);
+```
+
+
+### Transacciones 
+
+Sequelize permite definir transacciones como un conjunto de operaciones sobre la base de datos para que sean tratadas como una transacción atómica.
+
+para ello, se debe definir una transacción con ***sequelize.transaction()*** (notar que este método es asíncrono y debe esperarse a que sequelize prepare la transacción) 
+
+luego, para todas las operaciones sobre un modelo que queremos que forme parte de esa transacción, se le debe pasar un objeto indicando la transacción a la que pertenece.
+
+para indicar cuando finalizar la transacción, se utiliza el método .***commit******(),*** o si se detecto errores, podemos cancelarla con .***rollback******()***
+
+```
+const t = await sequelize.transaction();
+try {
+	const usuario = await Usuario.create({
+	nombre: 'Nicolás',
+	apellido: 'Juárez',
+	usuario: 'njuarez',
+	email: 'nico@mail.com',
+	genero: 'M',
+	perfilId: 2
+}, { transaction: t });
+	await LogActividad.create({
+	mensaje: `Alta de usuario ${usuario.usuario}`,
+	usuarioId: usuario.id
+}, { transaction: t });
+	await t.commit();
+} catch (error) {
+	await t.rollback();
+}
+```
+
+Podemos utilizar un ***wrapper*** en forma de callback pasado a .transaction() para que tanto el .***commit***() como el .***rollback***() se realizan de forma automática.
+
+### Patrón repositorio
+
+El patrón repositorio es una estrategia que permite separar la lógica del acceso a datos del resto de la aplicación, encapsulando las interacciones con la base de datos en una interfaz orientada a objetos (interfaz -> repositorio)
+
+De esta forma toda la lógica de acceso a datos no afecta al resto de la aplicación, pudiendo modificar esta sin afectar al resto de capas.
+
+Para cada modelo se define un repositorio, con métodos para acceder y realizar operaciones, o podemos realizar un repositorioBase genérico que puede usarse para cualquier modelo, y agregarle mas métodos de ser necesario, o usarla de extensión para un repositorio mas especifico.
+
+```
+export default class RepositorioBase {
+
+constructor(modelo) {
+this.modelo = modelo;
+}
+
+async obtenerTodos({ pagina = 1, limite = 10 } = {}) {
+const offset = (pagina - 1) * limite;
+return this.modelo.findAll({ limit: limite, offset: offset });
+}
+
+async obtenerPorId(id) {
+return this.modelo.findByPk(id);
+}
+
+async crear(datos) {
+return this.modelo.create(datos);
+}
+
+async actualizar(id, datos) {
+const instancia = await this.modelo.findByPk(id);
+if (!instancia) throw new Error(`Error: Instancia con id: ${id} no
+encontrada`);
+// Actualiza los datos de la instancia
+// y guarda los cambios en la base de datos
+// Se puede usar Object.assign o el método set para asignar los datos en lote
+// Object.assign(instancia, datos);
+// instancia.set(datos);
+// y luego guardar los cambios en la base de datos
+// return instancia.save();
+// O simplemente usar el método update
+// y pasarle los datos a actualizar
+return instancia.update(datos);
+}
+async eliminar(id) {
+const instancia = await this.modelo.findByPk(id);
+if (!instancia) return 0;
+await instancia.destroy();
+return 1;
+}
+}
+```
