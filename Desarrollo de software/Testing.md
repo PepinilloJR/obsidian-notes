@@ -187,13 +187,13 @@ test("Servidor inicia", async () => {
 
 ```
 
-Aqui, ***request*** sera el punto de partida, toma una aplicación express o una instancia de un server http (si usamos http puro), y devuelve un objeto con funciones preparadas para simular peticiones http, que son provistas por supertest (no son las mismas de jest, aunque tengan mismo nombre)
+Aquí, ***request*** sera el punto de partida, toma una aplicación express o una instancia de un server http (si usamos http puro), y devuelve un objeto con funciones preparadas para simular peticiones http, que son provistas por supertest (no son las mismas de jest, aunque tengan mismo nombre)
 
-.get() -> una de las posibles peticiones simuladas, devolvera una promesa y finalmente un response (podemos usar await de ser nescesario)
+.get() -> una de las posibles peticiones simuladas, devolverá una promesa y finalmente un response (podemos usar await de ser necesario)
 
-finalmente, podemos usar funciones de afirmación provistas por SuperTest, para verificar el estado, o para analizar el response mediante un calllback pasado al expect (unica razon de existir de un callback en el expect)
+finalmente, podemos usar funciones de afirmación provistas por SuperTest, para verificar el estado, o para analizar el response mediante un calllback pasado al expect (única razón de existir de un callback en el expect)
 
-Aqui algunas funciones de afirmación posibles
+Aquí algunas funciones de afirmación posibles
 
 ```
 
@@ -256,3 +256,99 @@ describe("pruebas para API usuarios", () => {
 ```
 ### Mock 
 
+Un Mock en Jest es un objeto que imita la interfaz y salida de una función, clase, o modulo, o en general cualquier elemento de software que defina un comportamiento.
+
+```
+// una funcion mock puede obtenerse de 
+
+const mockFunction = jest.fn() -> retornara una funcion mock
+
+```
+
+Usando esta mock function, podemos reemplazar la funcionalidad de ciertas funciones, para que entreguen un resultado especifico, un error especifico, un response especifico o un reject especifico, para poder testear el componente que hace uso de esta función (dependencia), pero que no queremos específicamente testear esta función particular, si no el componente que la usa
+
+-> nos estamos preguntando, si las dependencias del componente funcionan como deberían, funciona correctamente el componente?
+
+### Mockeo de modulos
+
+Es posible hacer un Mock de todas las funciones exportadas de un modulo, realizando `jest.mock("direccion del modulo")`
+Entonces, todas las funciones que importemos del modulo serán Mock y podremos acceder a los métodos del objeto Mock para cambiar su comportamiento
+
+Si queremos, podemos usar ***jest.spyOn***, que permite realizar un Mock de una de las funciones de un modulo, dejando al resto con su funcionalidad intacta 
+
+```
+// importo todas las funciones dentro de un objeto nav
+import * as nav from "./navigation";
+
+// cambio el comportamiento del 
+const mockCalculateRoute = jest.spyOn(nav, "calculateRoute");
+// spyOn devuelve una referencia a la funcion mockeada, pero puede usarse directamente la funcion desde nav, ya que estara mockeada tambien
+```
+
+### EJEMPLO de testing de routes
+
+tenemos una ruta de barrios, estos utilizan el servicio de barrios para la obtención de los datos, y ante una solicitud HTTP, deben devolver estos datos.
+
+nosotros queremos exclusivamente testear las rutas, que devuelvan los valores correctos, por ello debemos considerar un Mock de los servicios de barrio
+
+el código es el siguiente: 
+
+```
+import BarriosService from "../../services/barrios.service";
+import barriosRouter from "../../routes/barrios.routes.js";
+import {jest} from "@jest/globals";
+import {describe, it, expect, afterEach } from "@jest/globals";
+import express from "express";
+import request from "supertest";
+
+// hacemos el mock de los servicios de barrio
+
+jest.mock("../../services/barrios.service.js");
+
+
+// el testeo esta fuera de la aplicacion principal, debemos configurar un //express() con las rutas para el testeo
+
+const app = express();
+app.use(express.json());
+app.use("/barrios", barriosRouter)
+
+
+// definimos un test, uno para la obtencion de los valores desde la ruta, 
+// y otra para el manejo de un error interno, si tiene un error interno, 
+// deberia poder manejarlo y indicar el error desde la ruta
+
+describe("Barrios Routes", () => {
+	// limpia la informacion de los Mocks ( conteos de veces llamados, argumentos llamados, retornos almacenados, etc)
+    afterEach(() => {
+        jest.clearAllMocks();
+    });
+    
+    describe("GET /barrios", () => {
+        it("should return all barrios ordered", async () => {
+
+			// configuramos el mock para el servicio obtenerTodosOrdenados, que              // es usado en la ruta
+			
+            const mockResponse = [{ idBarrio: 1, nombre: "Barrio Test" }];
+            BarriosService.obtenerTodosOrdenados.mockResolvedValue(mockResponse);
+
+
+            // cuando llamamos a la ruta, considerando que sabemos que el                    // resultado del servicio sera el valor mockeado mockResponse
+	        // entonces la ruta deberia indicar un status 200 y dar por                      // resultado el mockResponse
+            const response = await request(app).get("/barrios");
+            expect(response.status).toBe(200);
+            expect(response.body).toEqual(mockResponse);
+        });
+
+        // para el caso de que hubiera un error en el servicio, el route                 //deberia ser capaz de retornar una respuesta que lo indique
+        
+        it("should handle server errors", async () => {
+            BarriosService.obtenerTodosOrdenados.mockRejectedValue(new Error("Test error"));
+            const response = await request(app).get("/barrios");
+            expect(response.status).toBe(500);
+            expect(response.body).toEqual({ error: "Error interno del servidor" });
+        });
+    });
+
+```
+
+Luego, si quisiéramos testear los servicios en si, tendríamos que realizar un Mock de los repositorios involucrados, esto se puede hacer utilizando la misma lógica presentada en el código anterior.
