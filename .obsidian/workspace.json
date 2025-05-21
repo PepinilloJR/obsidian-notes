@@ -55,16 +55,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Desarrollo de software/Testing.md",
+                "file": "Bases de datos/SQL - uso del select.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Testing"
+              "title": "SQL - uso del select"
+            }
+          },
+          {
+            "id": "3511a15a35facf18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL - consultas SUMARIAS Y AGRUPACIÓN"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -121,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 409.5
   },
   "right": {
     "id": "ad6abd69816c4b3c",
@@ -211,41 +225,42 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5095f6c981ac79f4",
+  "active": "3511a15a35facf18",
   "lastOpenFiles": [
-    "Pasted image 20250516152150.png",
-    "Bases de datos/SQL - uso del select.md",
-    "Desarrollo de software/Testing.md",
-    "Pasted image 20250326000525.png",
+    "Pasted image 20250521201314.png",
+    "Pasted image 20250521201219.png",
     "Bases de datos/SQL - Introduccion.md",
-    "Bases de datos/8. Bases de datos relacionales.md",
-    "Bases de datos/7. Modelos de datos.md",
+    "Bases de datos/SQL - uso del select.md",
+    "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
+    "Pasted image 20250521200520.png",
+    "Pasted image 20250521200226.png",
+    "Pasted image 20250521195749.png",
+    "Pasted image 20250521191057.png",
+    "Bases de datos/Normalización de bases de datos relacionales.md",
     "Bases de datos/9. Álgebra relacional.md",
-    "Pasted image 20250510123854.png",
-    "Bases de datos/Pasted image 20250322214730.png",
+    "Bases de datos/7. Modelos de datos.md",
+    "Bases de datos/1. Bases de datos - Introduccion.md",
+    "Bases de datos/2. Estructura del DBMS.md",
+    "Pasted image 20250518174928.png",
+    "Pasted image 20250518174705.png",
+    "Pasted image 20250518174622.png",
+    "Desarrollo de software/Testing.md",
+    "Desarrollo de software/Sitios estáticos y SPA.md",
+    "Pasted image 20250516152150.png",
+    "Pasted image 20250326000525.png",
+    "Bases de datos/8. Bases de datos relacionales.md",
     "Desarrollo de software/Backend utilizando Express.js.md",
     "Desarrollo de software/ORM y sequelize.md",
     "Desarrollo de software/Javascript del lado del servidor, asincronia.md",
     "Desarrollo de software/Javascript y el DOM, extencion del SPA.md",
     "Desarrollo de software/Javascript.md",
-    "Bases de datos/Normalización de bases de datos relacionales.md",
     "Desarrollo de software/Maquetacion web.md",
     "Desarrollo de software/Introducción a desarrollo de software.md",
     "Desarrollo de software/desarrollo web.md",
-    "Desarrollo de software/Sitios estáticos y SPA.md",
-    "Pasted image 20250427202207.png",
     "Bases de datos/6. Bases de datos distribuidas.md",
     "Bases de datos/5. Arquitecturas para la DBMS.md",
     "Bases de datos/4. Estructuras de indexación para ficheros.md",
     "Bases de datos/3. Almacenamiento de bases de datos.md",
-    "Bases de datos/2. Estructura del DBMS.md",
-    "Bases de datos/1. Bases de datos - Introduccion.md",
-    "Bases de datos/Pasted image 20250319220944.png",
-    "Pasted image 20250424174826.png",
-    "Pasted image 20250423082722.png",
-    "Pasted image 20250423082715.png",
-    "Pasted image 20250422191700.png",
-    "Pasted image 20250422185448.png",
     "Untitled",
     "Desarrollo de software",
     "Bases de datos",
