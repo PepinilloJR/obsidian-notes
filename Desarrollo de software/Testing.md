@@ -127,11 +127,21 @@ Jest es el framework de pruebas unitarias más popular en JavaScript, pruebas se
 "test": "jest --testTimeout=10000 --force-exit",
 "test:jsmodule" : "node --experimental-vm-modules jest --verbose --silent --
 detectOpenHandles"
+// si no funciona 
+"test:jsmodule": "node --experimental-vm-modules ./node_modules/.bin/jest --testTimeout=10000 --force-exit",
 },
 "devDependencies": {
 "jest": "~29.7.0"
 }
 
+```
+
+# Importación correcta de jest y supertest si se usa Modules
+
+```
+import { jest } from '@jest/globals';
+
+import request from "supertest";
 ```
 
 
@@ -272,6 +282,9 @@ Usando esta mock function, podemos reemplazar la funcionalidad de ciertas funcio
 ### Mockeo de modulos
 
 Es posible hacer un Mock de todas las funciones exportadas de un modulo, realizando `jest.mock("direccion del modulo")`
+
+##### El mockeo de modulos no es posible si se usa Modules en lugar de CommonJS
+
 Entonces, todas las funciones que importemos del modulo serán Mock y podremos acceder a los métodos del objeto Mock para cambiar su comportamiento
 
 Si queremos, podemos usar ***jest.spyOn***, que permite realizar un Mock de una de las funciones de un modulo, dejando al resto con su funcionalidad intacta 
