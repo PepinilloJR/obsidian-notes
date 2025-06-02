@@ -179,16 +179,86 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "React -  React Hook Form.md",
+                "file": "Bases de datos/SQL - Introduccion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "React -  React Hook Form"
+              "title": "SQL - Introduccion"
+            }
+          },
+          {
+            "id": "d6ae6304cc10eb56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQL - Procedimientos almacenados.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL - Procedimientos almacenados"
+            }
+          },
+          {
+            "id": "b773ae3019c5d81a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQL - Triggers.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL - Triggers"
+            }
+          },
+          {
+            "id": "f81aa92e124f8582",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQL - Procedimientos almacenados.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL - Procedimientos almacenados"
+            }
+          },
+          {
+            "id": "8a0bbe52162c9aab",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQL - Triggers.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL - Triggers"
+            }
+          },
+          {
+            "id": "5e245c86696b56ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "SQL - Sinónimos, indices y Vistas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SQL - Sinónimos, indices y Vistas"
             }
           }
         ],
-        "currentTab": 12
+        "currentTab": 17
       }
     ],
     "direction": "vertical"
@@ -245,7 +315,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 409.5
+    "width": 408.5
   },
   "right": {
     "id": "ad6abd69816c4b3c",
@@ -335,10 +405,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "58a29120d44c7efe",
+  "active": "5e245c86696b56ae",
   "lastOpenFiles": [
+    "Pasted image 20250602171015.png",
+    "Desarrollo de software/React -  React Hook Form.md",
+    "SQL - Sinónimos, indices y Vistas.md",
+    "SQL - Triggers.md",
+    "SQL - Transacciones ACID.md",
+    "Pasted image 20250602161506.png",
+    "Pasted image 20250602155318.png",
+    "Pasted image 20250602155308.png",
+    "Pasted image 20250602155231.png",
+    "Pasted image 20250602153128.png",
+    "Pasted image 20250602152714.png",
+    "SQL - Procedimientos almacenados.md",
+    "SQL - Reglas de actualización y  eliminación.md",
+    "Bases de datos/SQL - Introduccion.md",
     "Desarrollo de software/React - AXIOS.md",
-    "React -  React Hook Form.md",
     "Pasted image 20250418191838.png",
     "Desarrollo de software/React - Routes y Navigation.md",
     "Desarrollo de software/React - Hooks.md",
@@ -352,27 +435,14 @@
     "Pasted image 20250326000630.png",
     "Desarrollo de software/Introducción a seguridad web.md",
     "Pasted image 20250526160519.png",
-    "Pasted image 20250526160318.png",
-    "Pasted image 20250526154016.png",
-    "Pasted image 20250526152520.png",
-    "Pasted image 20250526152349.png",
-    "Pasted image 20250526152136.png",
-    "Pasted image 20250526145644.png",
     "Desarrollo de software/Testing.md",
     "Bases de datos/8. Bases de datos relacionales.md",
-    "Bases de datos/SQL - Introduccion.md",
     "Bases de datos/SQL - uso del select.md",
     "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
     "Bases de datos/Normalización de bases de datos relacionales.md",
     "Bases de datos/9. Álgebra relacional.md",
     "Bases de datos/7. Modelos de datos.md",
     "Bases de datos/1. Bases de datos - Introduccion.md",
-    "Bases de datos/2. Estructura del DBMS.md",
-    "Desarrollo de software/ORM y sequelize.md",
-    "Desarrollo de software/Javascript del lado del servidor, asincronia.md",
-    "Desarrollo de software/Javascript y el DOM, extencion del SPA.md",
-    "Desarrollo de software/Javascript.md",
-    "Desarrollo de software/Maquetacion web.md",
     "Untitled",
     "Desarrollo de software",
     "Bases de datos",

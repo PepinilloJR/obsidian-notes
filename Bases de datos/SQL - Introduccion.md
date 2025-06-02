@@ -361,3 +361,21 @@ Se exige que para cada valor en una clave foránea, exista un valor en la clave 
 En el caso de la ***eliminación de una fila, afectamos específicamente a la integridad referencial,*** esto debido a que:
 
 Si la fila es referenciada en mas de una fila de otra relación mediante clave foránea, eliminar esta fila dejara a estas sin integridad referencial
+
+### Insertar, update, delete y la integridad
+
+Cuando realizamos un INSERT, tenemos las siguientes posibles violaciones a la integridad:
+
+1. PK duplicada o null
+2. FK sin concordancia
+3. valor duplicado cuando fue aplicada la restricción UNIQUE
+4. valor Null con restricción NOT NULL
+5. atributo fuera del dominio (tipo y valor)
+
+Cuando realizamos un UPDATE, se verifican las mismas adicionando:
+
+6. Valor de PK con hijos
+
+Esto quiere decir que al actualizar la clave primaria, si esta es referenciada como clave foránea en otras relaciones (es padre) entonces pueden quedar desactualizadas
+
+Cuando realizamos un DELETE, se afecta la integridad referencial, es decir, que si la fila tiene hijos en su clave primaria, estos quedaran desactualizados o apuntando a null.
