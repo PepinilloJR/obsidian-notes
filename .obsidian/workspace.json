@@ -4,261 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "b71ada5c8ef0cd70",
+        "id": "a4cae5dff2fb5146",
         "type": "tabs",
         "children": [
           {
-            "id": "79f9c94aa9efc4cf",
+            "id": "e8bec3f4bdb8690f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Desarrollo de software/Testing.md",
+                "file": "Bases de datos/SQL - Transacciones ACID.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Testing"
-            }
-          },
-          {
-            "id": "3c15cad499ee4720",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Pasted image 20250326000630.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250326000630"
-            }
-          },
-          {
-            "id": "733754734b7694a0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases de datos/SQL - Subconsultas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - Subconsultas"
-            }
-          },
-          {
-            "id": "162016fe6bc00a4e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Desarrollo de software/React - Introducción.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "React - Introducción"
-            }
-          },
-          {
-            "id": "8d50bfa59f8cd2a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Desarrollo de software/React - Hooks.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "React - Hooks"
-            }
-          },
-          {
-            "id": "e00bfa0105400638",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Desarrollo de software/React - Routes y Navigation.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "React - Routes y Navigation"
-            }
-          },
-          {
-            "id": "af0e51f8184ff734",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases de datos/SQL - Introduccion.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - Introduccion"
-            }
-          },
-          {
-            "id": "ab8fe7effe8dead2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases de datos/SQL - uso del select.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - uso del select"
-            }
-          },
-          {
-            "id": "6def0f9fa88298e7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases de datos/SQL - uso del select.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - uso del select"
-            }
-          },
-          {
-            "id": "3511a15a35facf18",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - consultas SUMARIAS Y AGRUPACIÓN"
-            }
-          },
-          {
-            "id": "7988d471b1d9678a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Desarrollo de software/Testing.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Testing"
-            }
-          },
-          {
-            "id": "23c23633730f6103",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Desarrollo de software/React - AXIOS.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "React - AXIOS"
-            }
-          },
-          {
-            "id": "58a29120d44c7efe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases de datos/SQL - Introduccion.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - Introduccion"
-            }
-          },
-          {
-            "id": "d6ae6304cc10eb56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SQL - Procedimientos almacenados.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - Procedimientos almacenados"
-            }
-          },
-          {
-            "id": "b773ae3019c5d81a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SQL - Triggers.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - Triggers"
-            }
-          },
-          {
-            "id": "f81aa92e124f8582",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SQL - Procedimientos almacenados.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - Procedimientos almacenados"
-            }
-          },
-          {
-            "id": "8a0bbe52162c9aab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SQL - Triggers.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - Triggers"
-            }
-          },
-          {
-            "id": "5e245c86696b56ae",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "SQL - Sinónimos, indices y Vistas.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SQL - Sinónimos, indices y Vistas"
+              "title": "SQL - Transacciones ACID"
             }
           }
-        ],
-        "currentTab": 17
+        ]
       }
     ],
     "direction": "vertical"
@@ -405,44 +168,44 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5e245c86696b56ae",
+  "active": "e8bec3f4bdb8690f",
   "lastOpenFiles": [
+    "Bases de datos/SQL - Triggers.md",
+    "Bases de datos/SQL - Introduccion.md",
+    "Bases de datos/SQL - Seguridad en la BD, grant y revoke.md",
+    "Bases de datos/SQL - Catalogo del sistema.md",
+    "Bases de datos/SQL - Procedimientos almacenados.md",
+    "Bases de datos/SQL - Transacciones ACID.md",
+    "Bases de datos/SQL - Sinónimos, indices y Vistas.md",
+    "Bases de datos/SQL - Subconsultas.md",
+    "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
+    "Bases de datos/SQL - uso del select.md",
+    "Bases de datos/SQL - Reglas de actualización y  eliminación.md",
+    "Desarrollo de software/React - Routes y Navigation.md",
+    "Desarrollo de software/Introducción a seguridad web.md",
+    "Desarrollo de software/Testing.md",
+    "Desarrollo de software/Autenticación y Autorización con JWT.md",
+    "Pasted image 20250602152714.png",
+    "Desarrollo de software/React - Introducción.md",
+    "Desarrollo de software/React - AXIOS.md",
+    "Desarrollo de software/React - Hooks.md",
     "Pasted image 20250602171015.png",
     "Desarrollo de software/React -  React Hook Form.md",
-    "SQL - Sinónimos, indices y Vistas.md",
-    "SQL - Triggers.md",
-    "SQL - Transacciones ACID.md",
     "Pasted image 20250602161506.png",
     "Pasted image 20250602155318.png",
     "Pasted image 20250602155308.png",
     "Pasted image 20250602155231.png",
     "Pasted image 20250602153128.png",
-    "Pasted image 20250602152714.png",
-    "SQL - Procedimientos almacenados.md",
-    "SQL - Reglas de actualización y  eliminación.md",
-    "Bases de datos/SQL - Introduccion.md",
-    "Desarrollo de software/React - AXIOS.md",
     "Pasted image 20250418191838.png",
-    "Desarrollo de software/React - Routes y Navigation.md",
-    "Desarrollo de software/React - Hooks.md",
     "Pasted image 20250530162702.png",
-    "Desarrollo de software/React - Introducción.md",
-    "Bases de datos/SQL - Subconsultas.md",
     "Desarrollo de software/Backend utilizando Express.js.md",
     "Desarrollo de software/desarrollo web.md",
     "Desarrollo de software/Sitios estáticos y SPA.md",
-    "Autenticación y Autorización con JWT.md",
     "Pasted image 20250326000630.png",
-    "Desarrollo de software/Introducción a seguridad web.md",
-    "Pasted image 20250526160519.png",
-    "Desarrollo de software/Testing.md",
     "Bases de datos/8. Bases de datos relacionales.md",
-    "Bases de datos/SQL - uso del select.md",
-    "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
     "Bases de datos/Normalización de bases de datos relacionales.md",
     "Bases de datos/9. Álgebra relacional.md",
     "Bases de datos/7. Modelos de datos.md",
-    "Bases de datos/1. Bases de datos - Introduccion.md",
     "Untitled",
     "Desarrollo de software",
     "Bases de datos",

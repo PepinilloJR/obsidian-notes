@@ -52,7 +52,7 @@ ON [PRIMARY];
 
 ### Vistas
 
-Las vistas son consultas almacenadas, que pueden entenderse como una tabla virtual (no tiene datos realles) que es un subconjunto de una tabla real o fuente.
+Las vistas son consultas almacenadas, que pueden entenderse como una tabla virtual (no tiene datos reales) que es un subconjunto de una tabla real o fuente.
 
 La vista posee un nombre y es almacenada en el diccionario de datos de la BD
 
@@ -136,7 +136,9 @@ solo es posible operar con INSERT, UPDATE, DELETE cuando se cumplen las siguient
     Ejemplo de lo que **no se permite**:
 	    ``SELECT nombre || ' ' || apellido AS nombre_completo``
 * **Tabla única y con derechos** 
-    La vista no debe ser compuesta y el usuario debe tener permisos suficientes para operar sobre esta
+    La vista no debe ser compuesta (multitabla) y el usuario debe tener permisos suficientes para operar sobre esta
+
+***En resumen***, una vista puede ser actualizable **solo si es una representación directa y simple de una tabla**.
 
 ### Consideraciones en la eliminación de una Vista
 

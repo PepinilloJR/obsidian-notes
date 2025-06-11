@@ -18,7 +18,7 @@ ORDER BY {lista de columnas} ASC|DESC
 
 ```
 
-El orden de ejecución sera el siguiente:
+El ***orden de ejecución*** o reglas de ***procesamientos*** serán el siguiente:
 
 - **FROM** – Se determina la(s) tabla(s) fuente y se realizan los _JOINs_ si hay.
     
@@ -28,11 +28,21 @@ El orden de ejecución sera el siguiente:
     
 - **HAVING** – Se filtran los grupos generados por `GROUP BY` (es como un `WHERE` pero aplicado a grupos).
     
+- **ORDER BY** – Se ordenan los resultados finales.
+     
 - **SELECT** – Se eligen y calculan las columnas a mostrar (pueden incluir agregaciones como `SUM`, `AVG`, etc.).
     
-- **ORDER BY** – Se ordenan los resultados finales.
-    
 - **LIMIT / OFFSET** (si existieran) – Se limita el número de filas devueltas.
+
+### Reglas de procesamiento en subconsultas con y sin referencia externa 
+
+Las reglas de procesamiento son el orden y el como se procesan las diferentes sentencias en una consulta u operacion en SQL, y difiere de forma variada entre diferentes DBMS
+
+Cuando se realizan subconsultas, existen dos posibilidades para su regla de procesamiento
+
+Si **NO existe referencias externas** a esta, la subconsulta se ejecuta una sola vez en algún momento de la consulta, y se guarda en memoria, no volviéndose a ejecutar en todo el proceso.
+
+En cambio, **si existen referencias externas,** la subconsulta deberá recalcularse por cada fila, ya que debe acceder al nuevo valor de la referencia externa.
 
 Veamos cada una de las palabras clave:
 
@@ -45,7 +55,6 @@ Ejemplo
 ```
 SELECT E.Nroemp,E.Apelemp,E.Nomemp,C.Catego,C.Descrip
 ```
-
 
 # FROM
 
@@ -222,7 +231,9 @@ FROM Empleados E JOIN Categorias C ON E.Catego = C.Id
 Sin embargo, existe una utilidad mas alla de la semántica, que puede ser útil para situaciones del tipo:
 "buscar relación A con B pero ademas incluir donde no se cumple la relación"
 
-Esto es con el OUTER JOIN (para esto es útil repasar álgebra relacional).
+Esto es con el OUTER JOIN o ***Composición externa***(para esto es útil repasar álgebra relacional).
+
+### Composición externa
 
 ![[Pasted image 20250521191057.png]]
 

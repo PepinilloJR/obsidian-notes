@@ -99,7 +99,8 @@ Es decir, se realizan dentro de una transacción múltiples consultas iguales y 
 
 El cerramiento consiste en bloquear secciones de la BD (encargado de esto el DBMS) que esta siendo accedida por una transacción, y hacer esperar al resto de transacciones hasta que se presente un COMMIT o ROLLBACK
 
-El nivel del bloque puede ser de la ***base de datos, una tabla, pagina, fila o dato***
+El nivel del bloqueo puede ser de la ***base de datos, una tabla, pagina, fila o dato***
+El ***mas usado a nivel programa*** suele ser el de ***fila***
 
 El tipo de cerramiento puede ser ***compartido***, cuando las transacciones son puramente de consulta, o puede ser ***exclusiva***, donde las transacciones incluyen actualizaciones en la BD
 
@@ -156,3 +157,4 @@ BEGIN TRANSACTION;
     -- Confirmamos los cambios
     COMMIT;
 ```
+

@@ -7,21 +7,25 @@ SQL es interpretado por el DBMS y realiza acciones sobre la base de datos
 
 SQL es ***No Procedimental***, es decir, el código no se escribe como una secuencia de instrucciones, de hecho, su ejecución no es secuencial en el orden en el que se escribe el código, para ser específicos, el usuario especifica que se debe hacer, no como hacerlo, por lo que también decimos que es Funcional (No Procedimental = Funcional)
 
+### Estándar de SQL
+
+El estándar SQL es un conjunto de definiciones y reglas que normalizan los sistemas de bases de datos, de modo que todo el software funcione de una forma ***que permita la portabilidad*** entre bases de datos de un DBMS a otro
+
 ### Mito de la portabilidad:
 
-Al existir estándares de SQL, se creyó que al elaborar una software para la manipulación de la base de datos, utilizando SQL, podría ser utilizado en cualquier sistema de manejo de datos basado en SQL , pero esto no es mas que eso, ya que las diferencias actuales existentes entre los dialectos SQL de cada vendedor son suficientemente significativos para que una aplicación, al cambiar el sistema de manejo de datos que utiliza, deba modificarse.
+Al existir estándares de SQL, se creyó que al elaborar una software para la manipulación de la base de datos, utilizando SQL, podría ser utilizado en cualquier sistema de manejo de datos basado en SQL , pero esto no es mas que eso, un mito, ya que las diferencias actuales existentes entre los dialectos SQL de cada vendedor son suficientemente significativos para que una aplicación, al cambiar el sistema de manejo de datos que utiliza, deba modificarse.
 
 Estas diferencias suelen estar englobadas en los siguientes puntos:
 
-* Códigos de error
-* Tipos de datos -> caracteres (long  o fijos), enteros, decimales, floats, datos extendidos, date, datetime, etc
-* Diccionario de datos
-* SQL interactivo
-* Interfaz del programa
-* SQL dinámico
-* Diferencias semánticas -> que significa y afecta Null , funciones que se usan, etc
-* Secuencias de cotejo -> ordenación de los datos de una consulta
-* Estructura de la base de datos
+* **Códigos de error**
+* **Tipos de datos**-> caracteres (long  o fijos), enteros, decimales, floats, datos extendidos, date, datetime, etc
+* ***Diccionario de datos***
+* ***SQL interactivo***
+* ***Interfaz del programa***
+* ***SQL dinámico***
+* ***Diferencias semánticas*** -> que significa y afecta Null , funciones que se usan, etc
+* ***Secuencias de cotejo*** -> **secuencia de cotejo** determina cómo un DBMS **ordena, compara y diferencia cadenas de texto**, considerando idioma, mayúsculas, acentos, y más.
+* ***Estructura de la base de datos***
 
 ### Sentencias DDL
 
@@ -199,7 +203,7 @@ CREATE TABLE Item (
         FOREIGN KEY (id_producto) 
         REFERENCES PRODUCTO (id)
         ON UPDATE CASCADE -- regla de compensacion, CASCADE refiere a que todas las tablas asociadas se actualizaran cuando se cambie desde la tabla Item 
-        ON DELETE NO ACTION -- regla de compensacion, aqui NO ACTION nos dice que cuando eliminemos una fila, no hacer nada sobre las tablas asociadas (si fuera cascade, se eliminarian tambien las filas asociadas de la tabla asociada)
+        ON DELETE NO ACTION -- regla de compensacion, aqui NO ACTION nos dice que cuando eliminemos una fila, prohibirlo mientras existan tablas asociadas (si fuera cascade, se eliminarian tambien las filas asociadas de la tabla asociada)
 );
 ```
 
@@ -366,16 +370,41 @@ Si la fila es referenciada en mas de una fila de otra relación mediante clave f
 
 Cuando realizamos un INSERT, tenemos las siguientes posibles violaciones a la integridad:
 
-1. PK duplicada o null
-2. FK sin concordancia
-3. valor duplicado cuando fue aplicada la restricción UNIQUE
+1. PK duplicada o null (unicidad e integridad entidad)
+2. FK sin concordancia (integridad referencial)
+3. valor duplicado cuando fue aplicada la restricción UNIQUE 
 4. valor Null con restricción NOT NULL
 5. atributo fuera del dominio (tipo y valor)
+6. chequeo de validez
 
 Cuando realizamos un UPDATE, se verifican las mismas adicionando:
 
-6. Valor de PK con hijos
+7. Valor de PK con hijos
 
 Esto quiere decir que al actualizar la clave primaria, si esta es referenciada como clave foránea en otras relaciones (es padre) entonces pueden quedar desactualizadas
 
-Cuando realizamos un DELETE, se afecta la integridad referencial, es decir, que si la fila tiene hijos en su clave primaria, estos quedaran desactualizados o apuntando a null.
+Cuando realizamos un DELETE, se afecta la integridad referencial, es decir, que si la fila tiene hijos en su clave primaria, estos quedaran apuntando a una entidad que no existe
+
+Finalmente existen dos restricciones no tan visibles pero que también pueden darse como una violación de integridad por parte de las operaciones insert, update y delete
+
+#### Ciclos referenciales:
+
+Un ***ciclo referencial*** se da cuando dos o mas tablas se referencian entre si, de forma indirecta o directa:
+
+- Tabla A tiene una FK a Tabla B
+    
+- Tabla B tiene una FK a Tabla C
+    
+- Tabla C tiene una FK a Tabla A
+
+Esto genera un ciclo de referencias que genera dos problemas a la hora de insertar una tabla, o eliminar una tabla
+
+***En el insert:*** No se puede insertar una fila en A sin que exista una fila en B y viceversa, porque ambas dependen de que exista al menos una de ellas, para no violar las restricciones de FK.
+
+***En el delete:*** No es posible borrar un A porque depende de un B, y no puede borrarse un B porque depende de un A, por lo que queda bloqueado.
+Adicionalmente, si esta en modo cascade, esto genera una cascada de errores de integridad referencial, donde se eliminaran gran parte de las filas.
+
+#### Procedimientos comerciales:
+
+la complejidad del software que interactua con la base de datos, implica una duplicación del esfuerzo y el mantenimiento requerido para el sistema.
+Esta al cambiar, requiere un cambio tanto en la base de datos como en los programas que las usan
