@@ -1,5 +1,5 @@
 
-SQL permite la ***definición, manipulación, control de acceso, compartir e integridad de los datos***.
+SQL (lenguaje de consultas estructurado) es un lenguaje que permite la ***definición, manipulación, control de acceso, compartir e integridad de los datos***.
 
 SQL es interpretado por el DBMS y realiza acciones sobre la base de datos 
 

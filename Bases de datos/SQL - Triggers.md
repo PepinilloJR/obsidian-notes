@@ -8,7 +8,7 @@ Sintaxis:
 CREATE TRIGGER nombreTrigger
 ON tabla
 
-FOR [operacion DML] AS 
+AFTER (o FOR) [operacion DML] AS 
 
 BEGIN 
 	....

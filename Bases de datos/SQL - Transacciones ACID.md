@@ -77,16 +77,32 @@ Una primera transacción actualiza los datos a tiempo, por lo que la segunda tra
 ![[Pasted image 20250602155231.png]]
 #### 3. Datos inconsistentes
 
-Consulta de datos con actualización confirmada posterior de otro usuario
+Una transacción lee el mismo dato **más de una vez**, pero el valor **cambia entre lecturas** porque otra transacción lo modificó mientras tanto.
 
-![[Pasted image 20250602155318.png]]
+- T1 lee el precio de un producto (100).
+    
+- T2 cambia ese precio a 120 y hace COMMIT.
+    
+- T1 vuelve a leer el precio y obtiene 120.
 
 #### 4. Inserción fantasma
 
-se realiza una consulta a la BD y posterior inserción que afecta sobre la visión anterior.
+Se realiza una consulta a la BD y posterior inserción que afecta sobre la visión anterior.
 
-Es decir, se realizan dentro de una transacción múltiples consultas iguales y en una de estas aparece un registro nuevo que no esta en las otras, debido a una inserción perteneciente a una transacción de otro usuario
+Es decir, se realizan dentro de una transacción múltiples consultas iguales y en una de estas aparece un registro nuevo que no esta en las otras, debido a una inserción perteneciente a una transacción de otro usuario:
 
+
+```
+Una transacción ejecuta la misma consulta dos veces, pero entre ambas otro proceso insertó nuevos registros que afectan el resultado. 
+-- Transacción A 
+BEGIN TRANSACTION; SELECT COUNT(_) FROM Clientes WHERE ciudad = 'Córdoba';
+-- Cuenta 100 
+-- Transacción B 
+INSERT INTO Clientes (nombre, ciudad) VALUES ('Juan', 'Córdoba'); COMMIT TRANSACTION; 
+-- Transacción A vuelve a consultar 
+SELECT COUNT(_) FROM Clientes WHERE ciudad = 'Córdoba'; 
+-- Ahora cuenta 101 COMMIT TRANSACTION;
+```
 
 ## Soluciones a transacciones concurrentes
 

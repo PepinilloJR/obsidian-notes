@@ -1,5 +1,5 @@
 
-Las reglas de actualización y eliminación son aquellas que se especifican al crear un relación de tablas hijo (foreign keys), y que indican que hacer con la relación cuando se modifica el padre (se actualiza su PK o es eliminada)
+Las reglas de actualización y eliminación (denominadas ***reglas de compensación***) son aquellas que se especifican al crear un relación de tablas hijo (foreign keys), y que indican que hacer con la relación cuando se modifica el padre (se actualiza su PK o es eliminada)
 
 Estas se especifican con la sintaxis `ON DELETE` Y `ON UPDATE` en la creación de la tabla hijo.
 

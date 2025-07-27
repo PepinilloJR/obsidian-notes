@@ -15,6 +15,19 @@ END
 EXECUTE nombre VALOR1, VALOR2 ...
 ```
 
+SQL server
+
+```
+CREATE PROCEDURE nombre @Variable [tipo] ... 
+AS
+BEGIN 
+ ....
+END
+
+
+EXECnombre VALOR1, VALOR2 ...
+```
+
 Ejemplo:
 
 ```

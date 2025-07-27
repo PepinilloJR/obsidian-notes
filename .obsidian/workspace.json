@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bases de datos/SQL - Transacciones ACID.md",
+                "file": "Bases de datos/SQL - Introduccion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL - Transacciones ACID"
+              "title": "SQL - Introduccion"
             }
           }
         ]
@@ -170,17 +170,22 @@
   },
   "active": "e8bec3f4bdb8690f",
   "lastOpenFiles": [
-    "Bases de datos/SQL - Triggers.md",
-    "Bases de datos/SQL - Introduccion.md",
-    "Bases de datos/SQL - Seguridad en la BD, grant y revoke.md",
-    "Bases de datos/SQL - Catalogo del sistema.md",
     "Bases de datos/SQL - Procedimientos almacenados.md",
-    "Bases de datos/SQL - Transacciones ACID.md",
-    "Bases de datos/SQL - Sinónimos, indices y Vistas.md",
-    "Bases de datos/SQL - Subconsultas.md",
-    "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
-    "Bases de datos/SQL - uso del select.md",
     "Bases de datos/SQL - Reglas de actualización y  eliminación.md",
+    "Bases de datos/SQL - Seguridad en la BD, grant y revoke.md",
+    "Bases de datos/SQL - Sinónimos, indices y Vistas.md",
+    "Bases de datos/SQL - Transacciones ACID.md",
+    "Bases de datos/SQL - Subconsultas.md",
+    "Bases de datos/SQL - Introduccion.md",
+    "Bases de datos/SQL - uso del select.md",
+    "Bases de datos/SQL - Triggers.md",
+    "Bases de datos/SQL - Catalogo del sistema.md",
+    "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
+    "Bases de datos/6. Bases de datos distribuidas.md",
+    "Bases de datos/5. Arquitecturas para la DBMS.md",
+    "Bases de datos/7. Modelos de datos.md",
+    "Bases de datos/8. Bases de datos relacionales.md",
+    "Bases de datos/9. Álgebra relacional.md",
     "Desarrollo de software/React - Routes y Navigation.md",
     "Desarrollo de software/Introducción a seguridad web.md",
     "Desarrollo de software/Testing.md",
@@ -200,12 +205,7 @@
     "Pasted image 20250530162702.png",
     "Desarrollo de software/Backend utilizando Express.js.md",
     "Desarrollo de software/desarrollo web.md",
-    "Desarrollo de software/Sitios estáticos y SPA.md",
     "Pasted image 20250326000630.png",
-    "Bases de datos/8. Bases de datos relacionales.md",
-    "Bases de datos/Normalización de bases de datos relacionales.md",
-    "Bases de datos/9. Álgebra relacional.md",
-    "Bases de datos/7. Modelos de datos.md",
     "Untitled",
     "Desarrollo de software",
     "Bases de datos",

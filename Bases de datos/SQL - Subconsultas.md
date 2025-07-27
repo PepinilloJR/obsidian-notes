@@ -13,7 +13,24 @@ FROM Empleados Em)
 * Una subconsulta puede utilizar todas clausulas de SELECT menos ORDER BY 
 * Se usa encerrado entre paréntesis
 * Siempre se utiliza a la derecha del operador que requiere la consulta
-* No es posible unir SELECTs, solo actúa como una tabla intermedia
+* No puede haber UNION de otros SELECT, solo actúa como una tabla intermedia
+
+```
+SELECT nombre FROM empleados WHERE salario = 
+( SELECT salario FROM tabla1 UNION SELECT salario FROM tabla2 );
+```
+
+Si puede haber en otros contextos 
+
+```
+SELECT *
+FROM (
+    SELECT nombre FROM empleados_arg
+    UNION
+    SELECT nombre FROM empleados_uru
+) AS todos_los_empleados;
+```
+
 * Pueden incluir referencias externa
 
 

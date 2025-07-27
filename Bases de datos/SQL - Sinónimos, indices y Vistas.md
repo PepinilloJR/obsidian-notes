@@ -56,7 +56,9 @@ Las vistas son consultas almacenadas, que pueden entenderse como una tabla virtu
 
 La vista posee un nombre y es almacenada en el diccionario de datos de la BD
 
-Las vistas son ***importantes en seguridad,*** ya que brinda la capacidad de mostrar distintas perspectivas y permisos a usuarios distintos.
+Las vistas son ***importantes en seguridad,*** ya que brinda la capacidad de **mostrar distintas perspectivas a distintos usuarios** y permisos a usuarios distintos.
+
+Mantienen la integridad de los datos y se presentan de forma natural y sencilla (simplificación de una tabla) al usuario
 
 Crea un ***aislamiento ante cambios en la estructura de la BD,*** ya que la vista se mantendrá igual siempre y cuando la consulta contenida sea posible
 
@@ -137,6 +139,9 @@ solo es posible operar con INSERT, UPDATE, DELETE cuando se cumplen las siguient
 	    ``SELECT nombre || ' ' || apellido AS nombre_completo``
 * **Tabla única y con derechos** 
     La vista no debe ser compuesta (multitabla) y el usuario debe tener permisos suficientes para operar sobre esta
+* ***Si esta basada en otra vista***
+	
+* ***Tiene Order by***
 
 ***En resumen***, una vista puede ser actualizable **solo si es una representación directa y simple de una tabla**.
 
