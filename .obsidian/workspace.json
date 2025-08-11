@@ -1,24 +1,22 @@
 {
   "main": {
-    "id": "d7e800bc0131d6e4",
+    "id": "bf01453791112f01",
     "type": "split",
     "children": [
       {
-        "id": "a4cae5dff2fb5146",
+        "id": "f770d6679a0a8502",
         "type": "tabs",
         "children": [
           {
-            "id": "e8bec3f4bdb8690f",
+            "id": "38de386ffe2dd2b7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Bases de datos/SQL - Introduccion.md",
-                "mode": "source",
-                "source": false
+                "file": "Pasted image 20250326000525.png"
               },
-              "icon": "lucide-file",
-              "title": "SQL - Introduccion"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250326000525"
             }
           }
         ]
@@ -27,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "895a6f73a8af6f6e",
+    "id": "4f56c36501b5e19f",
     "type": "split",
     "children": [
       {
-        "id": "c22142509d549131",
+        "id": "106ab5369935c80f",
         "type": "tabs",
         "children": [
           {
-            "id": "5095f6c981ac79f4",
+            "id": "a76e7ef2d49e1316",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +46,7 @@
             }
           },
           {
-            "id": "67654bf573aaf7b9",
+            "id": "6fe6e5f7ed2ee048",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +63,7 @@
             }
           },
           {
-            "id": "049bb15fbed3136a",
+            "id": "0f03ac5a8b7dc524",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +76,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 408.5
+    "width": 300
   },
   "right": {
-    "id": "ad6abd69816c4b3c",
+    "id": "b932f3ea08ccd96e",
     "type": "split",
     "children": [
       {
-        "id": "23410e64dba9b289",
+        "id": "921cc8e938d06d7a",
         "type": "tabs",
         "children": [
           {
-            "id": "ccbfc7861a10ae8e",
+            "id": "723384443d77be1d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bases de datos - Introduccion.md",
+                "file": "Pasted image 20250326000525.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +102,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Bases de datos - Introduccion"
+              "title": "Backlinks for Pasted image 20250326000525"
             }
           },
           {
-            "id": "79b26fd820dfa40d",
+            "id": "d43df82b19a1eae8",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bases de datos - Introduccion.md",
+                "file": "Pasted image 20250326000525.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Bases de datos - Introduccion"
+              "title": "Outgoing links from Pasted image 20250326000525"
             }
           },
           {
-            "id": "74941f5795062cb5",
+            "id": "80f5cc51f0918f03",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,18 +135,18 @@
             }
           },
           {
-            "id": "09d1386ca82e87b1",
+            "id": "4894510749083b34",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bases de datos - Introduccion.md",
+                "file": "Pasted image 20250326000525.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Bases de datos - Introduccion"
+              "title": "Outline of Pasted image 20250326000525"
             }
           }
         ]
@@ -168,49 +166,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e8bec3f4bdb8690f",
+  "active": "38de386ffe2dd2b7",
   "lastOpenFiles": [
-    "Bases de datos/SQL - Procedimientos almacenados.md",
-    "Bases de datos/SQL - Reglas de actualización y  eliminación.md",
-    "Bases de datos/SQL - Seguridad en la BD, grant y revoke.md",
-    "Bases de datos/SQL - Sinónimos, indices y Vistas.md",
-    "Bases de datos/SQL - Transacciones ACID.md",
-    "Bases de datos/SQL - Subconsultas.md",
-    "Bases de datos/SQL - Introduccion.md",
-    "Bases de datos/SQL - uso del select.md",
-    "Bases de datos/SQL - Triggers.md",
-    "Bases de datos/SQL - Catalogo del sistema.md",
-    "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
-    "Bases de datos/6. Bases de datos distribuidas.md",
-    "Bases de datos/5. Arquitecturas para la DBMS.md",
-    "Bases de datos/7. Modelos de datos.md",
-    "Bases de datos/8. Bases de datos relacionales.md",
-    "Bases de datos/9. Álgebra relacional.md",
-    "Desarrollo de software/React - Routes y Navigation.md",
-    "Desarrollo de software/Introducción a seguridad web.md",
-    "Desarrollo de software/Testing.md",
-    "Desarrollo de software/Autenticación y Autorización con JWT.md",
-    "Pasted image 20250602152714.png",
-    "Desarrollo de software/React - Introducción.md",
-    "Desarrollo de software/React - AXIOS.md",
-    "Desarrollo de software/React - Hooks.md",
     "Pasted image 20250602171015.png",
-    "Desarrollo de software/React -  React Hook Form.md",
     "Pasted image 20250602161506.png",
     "Pasted image 20250602155318.png",
     "Pasted image 20250602155308.png",
     "Pasted image 20250602155231.png",
     "Pasted image 20250602153128.png",
-    "Pasted image 20250418191838.png",
+    "Pasted image 20250602152714.png",
     "Pasted image 20250530162702.png",
-    "Desarrollo de software/Backend utilizando Express.js.md",
+    "Pasted image 20250526160519.png",
+    "Pasted image 20250526160318.png",
+    "Pasted image 20250526154016.png",
     "Desarrollo de software/desarrollo web.md",
-    "Pasted image 20250326000630.png",
-    "Untitled",
+    "Desarrollo de software/Testing.md",
+    "Desarrollo de software/Sitios estáticos y SPA.md",
+    "Desarrollo de software/React - Routes y Navigation.md",
+    "Desarrollo de software/React - Introducción.md",
+    "Desarrollo de software/React - Hooks.md",
+    "Desarrollo de software/React - AXIOS.md",
+    "Desarrollo de software/React -  React Hook Form.md",
+    "Desarrollo de software/ORM y sequelize.md",
+    "Desarrollo de software/Maquetacion web.md",
+    "Desarrollo de software/Javascript.md",
+    "Desarrollo de software/Javascript y el DOM, extencion del SPA.md",
+    "Desarrollo de software/Javascript del lado del servidor, asincronia.md",
+    "Desarrollo de software/Introducción a seguridad web.md",
+    "Desarrollo de software/Introducción a desarrollo de software.md",
+    "Desarrollo de software/Backend utilizando Express.js.md",
+    "Desarrollo de software/Autenticación y Autorización con JWT.md",
     "Desarrollo de software",
-    "Bases de datos",
-    "Carpeta sin título",
-    "Untitled.canvas",
-    "Bases de datos relacionales"
+    "Bases de datos/SQL - uso del select.md",
+    "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
+    "Bases de datos/SQL - Triggers.md",
+    "Bases de datos/SQL - Transacciones ACID.md",
+    "Bases de datos/SQL - Subconsultas.md",
+    "Bases de datos/SQL - Sinónimos, indices y Vistas.md",
+    "Bases de datos/SQL - Seguridad en la BD, grant y revoke.md",
+    "Bases de datos/SQL - Reglas de actualización y  eliminación.md",
+    "Bases de datos"
   ]
 }
