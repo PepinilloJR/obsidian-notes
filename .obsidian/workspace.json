@@ -13,13 +13,182 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Pasted image 20250326000525.png"
+                "file": "images/Pasted image 20250326000525.png"
               },
               "icon": "lucide-image",
               "title": "Pasted image 20250326000525"
             }
+          },
+          {
+            "id": "d2c10506daf08e6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Introduccion.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Introduccion"
+            }
+          },
+          {
+            "id": "8cead93f4697581f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Microservicios.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Microservicios"
+            }
+          },
+          {
+            "id": "da903d11ab7d4ac0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Tecnologias - Introduccion.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Tecnologias - Introduccion"
+            }
+          },
+          {
+            "id": "a209827109b95cd9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Maven.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Maven"
+            }
+          },
+          {
+            "id": "8e86034a0f64c5d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Lombok para evitar boilerplate.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lombok para evitar boilerplate"
+            }
+          },
+          {
+            "id": "83202cc299930763",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Excepciones y errores.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Excepciones y errores"
+            }
+          },
+          {
+            "id": "31367a6ab1061870",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Introducción a testing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Introducción a testing"
+            }
+          },
+          {
+            "id": "5a9a3ff2975ccaae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Lombok para evitar boilerplate.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lombok para evitar boilerplate"
+            }
+          },
+          {
+            "id": "afe8b5a65e982269",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Clases anonimas - inline.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Clases anonimas - inline"
+            }
+          },
+          {
+            "id": "0fd57528a413c9e8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Clases parametrizadas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Clases parametrizadas"
+            }
+          },
+          {
+            "id": "bf8972bc19c14965",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Apis de java.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Apis de java"
+            }
+          },
+          {
+            "id": "d992aec649d3065a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Backend/Paquetes en Java.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Paquetes en Java"
+            }
           }
-        ]
+        ],
+        "currentTab": 12
       }
     ],
     "direction": "vertical"
@@ -92,7 +261,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted image 20250326000525.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +270,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Pasted image 20250326000525"
+              "title": "Backlinks"
             }
           },
           {
@@ -111,12 +279,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pasted image 20250326000525.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Pasted image 20250326000525"
+              "title": "Outgoing links"
             }
           },
           {
@@ -140,13 +307,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pasted image 20250326000525.png",
+                "file": "Java.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Pasted image 20250326000525"
+              "title": "Outline of Java"
             }
           }
         ]
@@ -158,6 +325,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -166,21 +334,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "38de386ffe2dd2b7",
+  "active": "a76e7ef2d49e1316",
   "lastOpenFiles": [
-    "Pasted image 20250602171015.png",
-    "Pasted image 20250602161506.png",
-    "Pasted image 20250602155318.png",
-    "Pasted image 20250602155308.png",
-    "Pasted image 20250602155231.png",
-    "Pasted image 20250602153128.png",
-    "Pasted image 20250602152714.png",
-    "Pasted image 20250530162702.png",
-    "Pasted image 20250526160519.png",
-    "Pasted image 20250526160318.png",
-    "Pasted image 20250526154016.png",
-    "Desarrollo de software/desarrollo web.md",
+    "images/Pasted image 20250905122924.png",
+    "Backend/Apis de java.md",
+    "Backend/Paquetes en Java.md",
+    "images/Pasted image 20250905120550.png",
+    "images/Pasted image 20250905120457.png",
+    "Backend/Clases parametrizadas.md",
+    "images/Pasted image 20250827171130.png",
+    "Backend/Clases anonimas - inline.md",
+    "Backend/Lombok para evitar boilerplate.md",
+    "Backend/Maven.md",
+    "Backend/Tecnologias - Introduccion.md",
+    "images/Pasted image 20250827151525.png",
+    "Backend/Introducción a testing.md",
+    "images/Pasted image 20250827170833.png",
+    "Backend/Excepciones y errores.md",
     "Desarrollo de software/Testing.md",
+    "images/Pasted image 20250827150434.png",
+    "images/Pasted image 20250814235004.png",
+    "images/Pasted image 20250813171643.png",
+    "images/Pasted image 20250813171548.png",
+    "Java.md",
+    "Bases de datos/2. Estructura del DBMS.md",
+    "images/Pasted image 20250326000525.png",
+    "images",
+    "Backend/Microservicios.md",
+    "Desarrollo de software/Autenticación y Autorización con JWT.md",
+    "Backend/Introduccion.md",
+    "Backend",
+    "Desarrollo de software/desarrollo web.md",
     "Desarrollo de software/Sitios estáticos y SPA.md",
     "Desarrollo de software/React - Routes y Navigation.md",
     "Desarrollo de software/React - Introducción.md",
@@ -190,21 +374,7 @@
     "Desarrollo de software/ORM y sequelize.md",
     "Desarrollo de software/Maquetacion web.md",
     "Desarrollo de software/Javascript.md",
-    "Desarrollo de software/Javascript y el DOM, extencion del SPA.md",
-    "Desarrollo de software/Javascript del lado del servidor, asincronia.md",
-    "Desarrollo de software/Introducción a seguridad web.md",
-    "Desarrollo de software/Introducción a desarrollo de software.md",
-    "Desarrollo de software/Backend utilizando Express.js.md",
-    "Desarrollo de software/Autenticación y Autorización con JWT.md",
     "Desarrollo de software",
-    "Bases de datos/SQL - uso del select.md",
-    "Bases de datos/SQL - consultas SUMARIAS Y AGRUPACIÓN.md",
-    "Bases de datos/SQL - Triggers.md",
-    "Bases de datos/SQL - Transacciones ACID.md",
-    "Bases de datos/SQL - Subconsultas.md",
-    "Bases de datos/SQL - Sinónimos, indices y Vistas.md",
-    "Bases de datos/SQL - Seguridad en la BD, grant y revoke.md",
-    "Bases de datos/SQL - Reglas de actualización y  eliminación.md",
     "Bases de datos"
   ]
 }
